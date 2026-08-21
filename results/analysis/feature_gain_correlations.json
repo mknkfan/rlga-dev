@@ -1,0 +1,12 @@
+{
+  "total_machine_area": -0.05289664415143792,
+  "occupancy": -0.052896644151437966,
+  "free_space_ratio": 0.0528966441514378,
+  "mean_machine_area": -0.05289664415143792,
+  "machine_area_cv": 0.36360994387941564,
+  "mean_aspect_ratio": 0.4160369507914484,
+  "max_aspect_ratio": 0.6438581631812329,
+  "mean_access_offset": 0.09299377891891528,
+  "max_diagonal_over_extent": 0.37940393878203604,
+  "random_feasibility_rate": -0.04406868558210334
+}

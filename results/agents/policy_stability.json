@@ -1,0 +1,14 @@
+{
+  "rlga_offspring": {
+    "mean_policy_agreement": 0.25925925925925924,
+    "min_policy_agreement": 0.2222222222222222,
+    "mean_q_correlation": 0.9006362367190764,
+    "n_pairs": 3.0
+  },
+  "rlga_elites": {
+    "mean_policy_agreement": 0.2222222222222222,
+    "min_policy_agreement": 0.1111111111111111,
+    "mean_q_correlation": 0.909810937769756,
+    "n_pairs": 3.0
+  }
+}
