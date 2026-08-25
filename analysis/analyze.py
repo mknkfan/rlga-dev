@@ -300,10 +300,15 @@ def budget_matched_table(
     if not traces:
         return []
 
-    per_variant_eval: Dict[str, List[float]] = defaultdict(list)
-    per_variant_time: Dict[str, List[float]] = defaultdict(list)
-    per_variant_evals_to_target: Dict[str, List[float]] = defaultdict(list)
-    per_variant_time_to_target: Dict[str, List[float]] = defaultdict(list)
+    # Keyed by (instance, seed), not appended to a flat list: a variant that
+    # was run on fewer pairs than the reference - a partially re-run grid, a
+    # variant added to an existing runs.csv - would otherwise be compared
+    # against the reference's values for *different* pairs.
+    Pair = Tuple[str, int]
+    per_variant_eval: Dict[str, Dict[Pair, float]] = defaultdict(dict)
+    per_variant_time: Dict[str, Dict[Pair, float]] = defaultdict(dict)
+    per_variant_evals_to_target: Dict[str, Dict[Pair, float]] = defaultdict(dict)
+    per_variant_time_to_target: Dict[str, Dict[Pair, float]] = defaultdict(dict)
 
     for instance in instances:
         for seed in seeds:
@@ -323,29 +328,34 @@ def budget_matched_table(
             finals = [f for f in finals if np.isfinite(f)]
             target = max(finals) if finals else float("inf")
 
+            pair = (instance, seed)
             for variant in available:
                 trace = traces[(variant, instance, seed)]
-                per_variant_eval[variant].append(
-                    value_at_budget(trace["evaluations"], trace["best_so_far"], eval_budget)
+                per_variant_eval[variant][pair] = value_at_budget(
+                    trace["evaluations"], trace["best_so_far"], eval_budget
                 )
-                per_variant_time[variant].append(
-                    value_at_budget(trace["elapsed"], trace["best_so_far"], time_budget)
+                per_variant_time[variant][pair] = value_at_budget(
+                    trace["elapsed"], trace["best_so_far"], time_budget
                 )
-                per_variant_evals_to_target[variant].append(
-                    budget_to_target(trace["evaluations"], trace["best_so_far"], target)
+                per_variant_evals_to_target[variant][pair] = budget_to_target(
+                    trace["evaluations"], trace["best_so_far"], target
                 )
-                per_variant_time_to_target[variant].append(
-                    budget_to_target(trace["elapsed"], trace["best_so_far"], target)
+                per_variant_time_to_target[variant][pair] = budget_to_target(
+                    trace["elapsed"], trace["best_so_far"], target
                 )
 
     records: List[Dict] = []
     for variant in variants:
         if variant not in per_variant_eval:
             continue
-        at_evals = describe(per_variant_eval[variant])
-        at_time = describe(per_variant_time[variant])
-        evals_to_target = [v for v in per_variant_evals_to_target[variant] if np.isfinite(v)]
-        time_to_target = [v for v in per_variant_time_to_target[variant] if np.isfinite(v)]
+        at_evals = describe(list(per_variant_eval[variant].values()))
+        at_time = describe(list(per_variant_time[variant].values()))
+        evals_to_target = [
+            v for v in per_variant_evals_to_target[variant].values() if np.isfinite(v)
+        ]
+        time_to_target = [
+            v for v in per_variant_time_to_target[variant].values() if np.isfinite(v)
+        ]
         records.append(
             {
                 "variant": variant,
@@ -377,11 +387,20 @@ def budget_matched_table(
                 record["p_at_common_time"] = float("nan")
                 p_values.append(1.0)
                 continue
+            # Only the pairs both were run on; anything else is not a pair.
+            shared = [pair for pair in per_variant_eval[reference] if pair in per_variant_eval[variant]]
+            if not shared:
+                record["p_at_common_evals"] = float("nan")
+                record["p_at_common_time"] = float("nan")
+                p_values.append(1.0)
+                continue
             test_evals = paired_effect_sizes(
-                per_variant_eval[reference], per_variant_eval[variant]
+                [per_variant_eval[reference][pair] for pair in shared],
+                [per_variant_eval[variant][pair] for pair in shared],
             )
             test_time = paired_effect_sizes(
-                per_variant_time[reference], per_variant_time[variant]
+                [per_variant_time[reference][pair] for pair in shared],
+                [per_variant_time[variant][pair] for pair in shared],
             )
             record["p_at_common_evals"] = test_evals.p_value
             record["p_at_common_time"] = test_time.p_value
