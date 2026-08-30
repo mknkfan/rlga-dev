@@ -444,7 +444,7 @@
   },
   "invocations": [
     {
-      "timestamp": "2026-08-24 23:56:27",
+      "timestamp": "2026-08-29 11:23:27",
       "argv": [],
       "variants": [
         "ga_ls00",
@@ -489,6 +489,6 @@
     "numpy": "2.5.2",
     "parallel_workers": 22,
     "timing_note": "Wall-clock time was measured with time.perf_counter and CPU time with time.process_time. When parallel_workers > 1 several runs share the machine, which inflates and adds noise to wall-clock time; CPU time is the more reliable effort measure in that case, and the evaluation count is hardware-independent.",
-    "timestamp": "2026-08-24 23:56:27"
+    "timestamp": "2026-08-29 11:23:27"
   }
 }

@@ -352,13 +352,7 @@ class ConfigurableGA:
 
     def calculate_diversity(self, population: Sequence[np.ndarray]) -> float:
         """Mean pairwise Euclidean distance between chromosomes (vectorised)."""
-        if len(population) < 2:
-            return 1.0
-        matrix = np.asarray(population, dtype=float)
-        diff = matrix[:, None, :] - matrix[None, :, :]
-        distances = np.sqrt(np.einsum("ijk,ijk->ij", diff, diff))
-        n = matrix.shape[0]
-        return float(distances.sum() / (n * (n - 1)))
+        return population_diversity(population)
 
     # ------------------------------------------------------------------
     # local-search rate controllers
@@ -646,6 +640,22 @@ class ConfigurableGA:
 # ----------------------------------------------------------------------
 # shared initial populations
 # ----------------------------------------------------------------------
+
+
+def population_diversity(population: Sequence[np.ndarray]) -> float:
+    """Mean pairwise Euclidean distance between the members of a population.
+
+    Shared by every optimiser in this project (the GA and the
+    :mod:`optimization.metaheuristics` baselines) so the diversity trace means
+    the same thing whichever algorithm produced it.
+    """
+    if len(population) < 2:
+        return 1.0
+    matrix = np.asarray(population, dtype=float)
+    diff = matrix[:, None, :] - matrix[None, :, :]
+    distances = np.sqrt(np.einsum("ijk,ijk->ij", diff, diff))
+    n = matrix.shape[0]
+    return float(distances.sum() / (n * (n - 1)))
 
 
 def make_initial_population(

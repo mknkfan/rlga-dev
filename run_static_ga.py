@@ -63,7 +63,7 @@ import sys
 import time
 from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass, replace
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence, Tuple, Union
 
 import numpy as np
 
@@ -74,6 +74,7 @@ from optimization.ga_core import (
     GAConfig,
     make_initial_population,
 )
+from optimization.metaheuristics import MetaConfig, build_optimizer
 from optimization.run_experiments import (
     _progress,
     environment_info,
@@ -252,10 +253,15 @@ class StaticJob:
     Picklable, and it carries the configuration itself: a worker therefore
     needs no variant registry and no agent, which is what lets the operator
     settings come straight from the command line.
+
+    ``config`` is a :class:`GAConfig` for a GA variant or a
+    :class:`~optimization.metaheuristics.MetaConfig` for one of the DE / PSO /
+    ABC / CSS baselines, so ``run_baselines`` can put both kinds of run into
+    one grid, one ``runs.csv`` and one analysis.
     """
 
     variant_key: str
-    config: GAConfig
+    config: Union[GAConfig, MetaConfig]
     split: str
     instance_index: int
     run: int
@@ -268,21 +274,34 @@ def execute(job: StaticJob) -> Dict:
     instance = build_instances(job.split)[job.instance_index]
     seed = run_seed_for(job.instance_index, job.run)
 
-    ga = ConfigurableGA(
-        instance.machines,
-        instance.sequence,
-        instance.robot_position,
-        instance.workspace_bounds,
-        config=job.config,
-        seed=seed,
-        instance_name=instance.name,
-    )
+    if isinstance(job.config, MetaConfig):
+        optimizer = build_optimizer(
+            job.config.algorithm,
+            instance.machines,
+            instance.sequence,
+            instance.robot_position,
+            instance.workspace_bounds,
+            config=job.config,
+            seed=seed,
+            instance_name=instance.name,
+        )
+    else:
+        optimizer = ConfigurableGA(
+            instance.machines,
+            instance.sequence,
+            instance.robot_position,
+            instance.workspace_bounds,
+            config=job.config,
+            seed=seed,
+            instance_name=instance.name,
+        )
     # Every variant on a given (instance, seed) pair starts from the same
-    # initial population, which is what makes the paired statistics valid.
+    # initial population, which is what makes the paired statistics valid --
+    # and is what puts the GA and the baselines on the same starting point.
     population = make_initial_population(
         instance.machines, instance.workspace_bounds, job.config.population_size, seed=seed
     )
-    result = ga.optimize(initial_population=population)
+    result = optimizer.optimize(initial_population=population)
 
     if job.store_trace:
         trace_dir = os.path.join(job.output_dir, "raw", job.variant_key)
@@ -332,7 +351,7 @@ def merge_rows(existing: Sequence[Dict], fresh: Sequence[Dict]) -> List[Dict]:
 
 
 def run_static_grid(
-    configs: Dict[str, GAConfig],
+    configs: Dict[str, Union[GAConfig, MetaConfig]],
     split: str,
     runs: int,
     workers: int,
@@ -341,6 +360,7 @@ def run_static_grid(
     csv_name: str = "runs.csv",
     store_trace: bool = True,
     append: bool = False,
+    pipeline: str = "static_ga",
 ) -> List[Dict]:
     """Run every (variant, instance, seed) combination and write the results."""
     instances = build_instances(split)
@@ -402,12 +422,14 @@ def run_static_grid(
         f"({time.perf_counter() - started:.0f}s)"
     )
 
-    _write_metadata(configs, split, runs, workers, output_dir, csv_name, indices, instances, append)
+    _write_metadata(
+        configs, split, runs, workers, output_dir, csv_name, indices, instances, append, pipeline
+    )
     return rows
 
 
 def _write_metadata(
-    configs: Dict[str, GAConfig],
+    configs: Dict[str, Union[GAConfig, MetaConfig]],
     split: str,
     runs: int,
     workers: int,
@@ -416,6 +438,7 @@ def _write_metadata(
     indices: Sequence[int],
     instances: Sequence,
     append: bool,
+    pipeline: str = "static_ga",
 ) -> None:
     """Mirror the sidecar ``run_experiments`` writes, minus the RL fields, so
     the two result directories are readable in the same way.
@@ -431,7 +454,7 @@ def _write_metadata(
         metadata["variants"] = loaded.get("variants", {})
         metadata["invocations"] = loaded.get("invocations", [])
 
-    metadata["pipeline"] = "static_ga"
+    metadata["pipeline"] = pipeline
     metadata["split"] = split
     metadata["runs_per_instance"] = runs
     metadata["instances"] = [instances[i].name for i in indices]

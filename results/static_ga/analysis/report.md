@@ -10,15 +10,15 @@ Median with interquartile range is the headline metric; the mean with its 95 % b
 
 | variant | fitness median [IQR] | fitness mean ± sd | fitness mean 95% CI | fitness min | time median [IQR] (s) | time mean ± sd (s) | evaluations median |
 |---|---|---|---|---|---|---|---|
-| GA 100% LS [LS on offspring] | 34.63 [32.21, 37.25] | 35.08 ± 4.25 | [34.27, 35.92] | 25.74 | 15.6 [14.0, 17.7] | 15.9 ± 2.6 | 222000 |
-| GA scheduled LS [LS on offspring] | 34.72 [32.48, 37.83] | 35.08 ± 3.74 | [34.35, 35.81] | 25.75 | 12.4 [10.7, 13.6] | 12.4 ± 1.9 | 146403 |
-| GA 50% LS [LS on elites] | 34.89 [32.80, 38.03] | 35.66 ± 4.71 | [34.76, 36.61] | 26.33 | 9.4 [8.4, 10.4] | 9.5 ± 1.3 | 77997 |
-| GA 50% LS [LS on offspring] | 35.05 [32.93, 37.89] | 35.34 ± 3.93 | [34.58, 36.11] | 27.05 | 12.1 [10.8, 13.5] | 12.2 ± 1.7 | 140973 |
-| GA no LS | 35.19 [33.00, 38.92] | 35.97 ± 4.23 | [35.16, 36.82] | 27.53 | 7.9 [7.3, 8.6] | 8.0 ± 0.9 | 60000 |
-| GA 100% LS [LS on elites] | 35.37 [33.03, 37.65] | 35.20 ± 4.22 | [34.38, 36.01] | 25.85 | 10.5 [9.6, 11.4] | 10.5 ± 1.5 | 96000 |
-| GA scheduled LS [LS on elites] | 35.51 [33.34, 37.93] | 35.70 ± 3.75 | [34.98, 36.44] | 27.64 | 9.3 [8.7, 10.0] | 9.4 ± 1.2 | 79197 |
-| GA 10% LS [LS on offspring] | 35.58 [33.37, 37.98] | 35.55 ± 3.76 | [34.83, 36.28] | 26.08 | 8.6 [8.0, 9.3] | 8.7 ± 1.0 | 76251 |
-| GA 10% LS [LS on elites] | 35.91 [33.05, 38.73] | 35.97 ± 3.82 | [35.23, 36.71] | 27.74 | 8.2 [7.7, 8.8] | 8.3 ± 1.0 | 63585 |
+| GA 100% LS [LS on offspring] | 34.63 [32.21, 37.25] | 35.08 ± 4.25 | [34.27, 35.92] | 25.74 | 16.1 [13.6, 18.3] | 16.4 ± 2.9 | 222000 |
+| GA scheduled LS [LS on offspring] | 34.72 [32.48, 37.83] | 35.08 ± 3.74 | [34.35, 35.81] | 25.75 | 12.7 [11.1, 14.3] | 12.8 ± 2.2 | 146403 |
+| GA 50% LS [LS on elites] | 34.89 [32.80, 38.03] | 35.66 ± 4.71 | [34.76, 36.61] | 26.33 | 9.8 [8.8, 11.2] | 10.0 ± 1.6 | 77997 |
+| GA 50% LS [LS on offspring] | 35.05 [32.93, 37.89] | 35.34 ± 3.93 | [34.58, 36.11] | 27.05 | 12.3 [11.4, 13.7] | 12.6 ± 1.9 | 140973 |
+| GA no LS | 35.19 [33.00, 38.92] | 35.97 ± 4.23 | [35.16, 36.82] | 27.53 | 8.3 [7.5, 9.1] | 8.4 ± 1.2 | 60000 |
+| GA 100% LS [LS on elites] | 35.37 [33.03, 37.65] | 35.20 ± 4.22 | [34.38, 36.01] | 25.85 | 11.0 [9.9, 12.1] | 11.2 ± 1.8 | 96000 |
+| GA scheduled LS [LS on elites] | 35.51 [33.34, 37.93] | 35.70 ± 3.75 | [34.98, 36.44] | 27.64 | 9.8 [8.9, 10.8] | 9.8 ± 1.4 | 79197 |
+| GA 10% LS [LS on offspring] | 35.58 [33.37, 37.98] | 35.55 ± 3.76 | [34.83, 36.28] | 26.08 | 9.1 [8.5, 10.0] | 9.2 ± 1.3 | 76251 |
+| GA 10% LS [LS on elites] | 35.91 [33.05, 38.73] | 35.97 ± 3.82 | [35.23, 36.71] | 27.74 | 8.6 [7.9, 9.2] | 8.6 ± 1.0 | 63585 |
 
 ## 2. Paired comparison against `ga_ls100_elites` - solution quality
 
@@ -41,14 +41,14 @@ Difference = reference - variant on matched seeds, in seconds, so a **negative**
 
 | variant | median diff | mean diff [95% CI] | reference lower / higher | p (Holm) | rank-biserial | Cliff's delta |
 |---|---|---|---|---|---|---|
-| GA 100% LS [LS on offspring] | -5.470 | -5.424 [-5.994, -4.843] | 98/2 | 0.0000 *** | -0.997 | -0.954 (large) |
-| GA scheduled LS [LS on offspring] | -1.932 | -1.837 [-2.248, -1.403] | 77/23 | 0.0000 *** | -0.758 | -0.535 (large) |
-| GA 50% LS [LS on offspring] | -1.691 | -1.632 [-2.032, -1.234] | 77/23 | 0.0000 *** | -0.737 | -0.516 (large) |
-| GA scheduled LS [LS on elites] | +0.997 | +1.096 [+0.774, +1.422] | 29/71 | 0.0000 *** | +0.634 | +0.438 (medium) |
-| GA 50% LS [LS on elites] | +1.005 | +1.068 [+0.696, +1.447] | 34/66 | 0.0000 *** | +0.554 | +0.399 (medium) |
-| GA 10% LS [LS on offspring] | +1.754 | +1.799 [+1.499, +2.109] | 11/89 | 0.0000 *** | +0.916 | +0.662 (large) |
-| GA 10% LS [LS on elites] | +2.289 | +2.232 [+1.937, +2.537] | 7/93 | 0.0000 *** | +0.979 | +0.784 (large) |
-| GA no LS | +2.643 | +2.518 [+2.184, +2.847] | 7/93 | 0.0000 *** | +0.956 | +0.853 (large) |
+| GA 100% LS [LS on offspring] | -5.101 | -5.193 [-5.786, -4.584] | 99/1 | 0.0000 *** | -0.999 | -0.906 (large) |
+| GA scheduled LS [LS on offspring] | -1.707 | -1.605 [-2.041, -1.153] | 75/25 | 0.0000 *** | -0.663 | -0.427 (medium) |
+| GA 50% LS [LS on offspring] | -1.519 | -1.452 [-1.871, -1.023] | 73/27 | 0.0000 *** | -0.671 | -0.447 (medium) |
+| GA 50% LS [LS on elites] | +0.902 | +1.174 [+0.769, +1.588] | 31/69 | 0.0000 *** | +0.555 | +0.368 (medium) |
+| GA scheduled LS [LS on elites] | +1.314 | +1.342 [+0.976, +1.715] | 28/72 | 0.0000 *** | +0.694 | +0.433 (medium) |
+| GA 10% LS [LS on offspring] | +1.635 | +1.943 [+1.621, +2.278] | 6/94 | 0.0000 *** | +0.935 | +0.631 (large) |
+| GA 10% LS [LS on elites] | +2.574 | +2.584 [+2.257, +2.924] | 3/97 | 0.0000 *** | +0.993 | +0.815 (large) |
+| GA no LS | +2.723 | +2.732 [+2.376, +3.101] | 4/96 | 0.0000 *** | +0.977 | +0.815 (large) |
 
 ## 4. Paired comparison against `ga_ls100_elites` - computational effort
 
@@ -71,15 +71,15 @@ Equal generation counts are not an equal computational budget: variants with a h
 
 | variant | fitness @ common evaluations (median) | fitness @ common wall-clock (median) | evaluations to common target (median) | seconds to common target (median) |
 |---|---|---|---|---|
-| GA no LS | 35.19 | 35.34 | 17300 | 2.1 |
-| GA 50% LS [LS on elites] | 35.19 | 34.90 | 17899 | 1.9 |
-| GA 10% LS [LS on offspring] | 35.66 | 35.62 | 19751 | 2.1 |
-| GA 100% LS [LS on elites] | 35.73 | 35.51 | 18760 | 1.9 |
-| GA scheduled LS [LS on offspring] | 35.81 | 35.37 | 19751 | 2.1 |
-| GA scheduled LS [LS on elites] | 35.88 | 35.74 | 17090 | 2.1 |
-| GA 10% LS [LS on elites] | 35.96 | 35.98 | 17090 | 2.1 |
-| GA 50% LS [LS on offspring] | 36.35 | 35.48 | 32840 | 2.4 |
-| GA 100% LS [LS on offspring] | 37.88 | 35.69 | 47190 | 3.0 |
+| GA no LS | 35.19 | 35.38 | 17300 | 2.2 |
+| GA 50% LS [LS on elites] | 35.19 | 35.08 | 17899 | 2.1 |
+| GA 10% LS [LS on offspring] | 35.66 | 35.64 | 19751 | 2.2 |
+| GA 100% LS [LS on elites] | 35.73 | 35.63 | 18760 | 2.0 |
+| GA scheduled LS [LS on offspring] | 35.81 | 35.36 | 19751 | 2.2 |
+| GA scheduled LS [LS on elites] | 35.88 | 35.63 | 17090 | 2.2 |
+| GA 10% LS [LS on elites] | 35.96 | 36.07 | 17090 | 2.2 |
+| GA 50% LS [LS on offspring] | 36.35 | 35.43 | 32840 | 2.5 |
+| GA 100% LS [LS on offspring] | 37.88 | 35.70 | 47190 | 2.9 |
 
 ## 6. Per-instance medians (fitness)
 

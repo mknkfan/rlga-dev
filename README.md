@@ -56,9 +56,13 @@ Run every command from inside this directory (the repository root), so `python -
 │   │                            ablation registry
 │   ├── run_experiments.py       the run grid: common random numbers, shared
 │   │                            initial populations, parallel workers, runs.csv
-│   └── control_matched_rate.py  supplementary control — a static GA at the RL
-│                                variant's own mean LS rate, and a random-policy
-│                                controller
+│   ├── control_matched_rate.py  supplementary control — a static GA at the RL
+│   │                            variant's own mean LS rate, and a random-policy
+│   │                            controller
+│   └── metaheuristics.py        the comparison methods — differential evolution,
+│                                particle swarm, artificial bee colony and charged
+│                                system search, on the GA's own objective, bounds,
+│                                initial populations and evaluation budget
 │
 ├── train/                     making the agents
 │   ├── calibrate_state_bins.py  state thresholds from the TRAINING split only
@@ -81,6 +85,8 @@ Run every command from inside this directory (the repository root), so `python -
 │   ├── test_fast_eval_equivalence.py  evaluator == collision_detector geometry
 │   ├── test_problem_parity.py         test instances unchanged since submission
 │   ├── test_stats_utils.py            statistics vs brute-force enumeration
+│   ├── test_metaheuristics.py         the baselines start where the GA starts,
+│   │                                  spend what the GA spends, and search
 │   └── reference_fyp/                 the previous FYP work's implementations the two
 │                                      parity tests check against
 │
@@ -99,6 +105,9 @@ Run every command from inside this directory (the repository root), so `python -
 │
 ├── paths.py                   every default location, resolved absolutely
 ├── run_all.py                 the stage orchestrator
+├── run_static_ga.py           the static-GA-only pipeline (no RL, no training)
+├── run_baselines.py           the static GA against DE, PSO, ABC and CSS
+│                              (see BASELINES.md)
 └── run_pipeline.sh            one command for the whole thing
 ```
 
@@ -120,6 +129,27 @@ is paired.
 
 The grid is a full cross product on purpose: static-vs-RL is read *within* a
 local-search target, so the controller is isolated from the search architecture.
+
+## Comparison against other metaheuristics
+
+`run_baselines.py` puts the static GA next to four classical population-based
+methods — differential evolution, particle swarm optimisation, the artificial
+bee colony and charged system search — each at its published default
+parameters:
+
+```bash
+python -m run_baselines                     # 10 instances x 10 seeds x 5 methods
+python -m run_baselines --list-parameters   # the defaults and their sources
+```
+
+They share the GA's representation, objective, bound repair, run seeds,
+**initial populations** and 60 000-evaluation budget, so only the search
+strategy differs; `tests/test_metaheuristics.py` asserts the shared starting
+point and the shared budget rather than assuming them. Output goes to
+`results/baselines/` in the same format as the other studies, and the same
+analysis and figure code produces its report. **`BASELINES.md`** documents the
+algorithms, the parameter values, the two places where the `+inf` objective
+forced an explicit choice, and how to read the results.
 
 ## The seven stages
 
@@ -195,6 +225,7 @@ python visualization/extra/test_run_layout.py           # re-runs a single insta
 python -m tests.test_stats_utils            # statistics vs brute force
 python -m tests.test_problem_parity         # instances unchanged
 python -m tests.test_fast_eval_equivalence  # ~15s, 14,400 chromosomes
+python -m tests.test_metaheuristics         # baselines: same start, same budget
 ```
 
 The last one is what licenses `feasibility/evaluator.py`: it checks the
