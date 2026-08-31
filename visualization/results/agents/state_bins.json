@@ -1,0 +1,10 @@
+{
+  "diversity_edges": [
+    166.38507930032674,
+    192.97649994109315
+  ],
+  "improvement_edge": 0.002013379464830513,
+  "source": "tertiles of population diversity and median positive relative improvement observed on the 'train' split (15 instances x 2 seeds x 2 LS targets, 300 generations, pop 200); 18000 diversity samples, 6428 positive-improvement samples. No test-split data was used.",
+  "n_diversity_bins": 3,
+  "n_improvement_bins": 3
+}

@@ -18,12 +18,23 @@ PACKAGE_ROOT = os.path.dirname(os.path.abspath(__file__))
 #: The repository checkout that contains it.
 REPO_ROOT = os.path.dirname(PACKAGE_ROOT)
 
-#: Everything a run produces lives under here.
+#: Everything a run produces lives under here.  Each study owns one
+#: subdirectory of it, so no two studies can overwrite each other.
 RESULTS_ROOT = os.path.join(PACKAGE_ROOT, "results")
 
-#: The archived study: ``runs.csv``, ``raw/``, ``analysis/`` and ``figures/``.
-#: Re-running without ``--results-dir`` overwrites it in place.
-DEFAULT_RESULTS_DIR = RESULTS_ROOT
+#: The archived RL-GA study: ``runs.csv``, ``raw/``, ``analysis/``,
+#: ``figures/``, ``agents/`` and the static-GA sub-study.  Re-running without
+#: ``--results-dir`` overwrites it in place.
+DEFAULT_RESULTS_DIR = os.path.join(RESULTS_ROOT, "results_rl_ga")
+
+#: The DE / PSO / ABC / CSS comparison written by ``run.run_baselines``.
+DEFAULT_BASELINE_RESULTS_DIR = os.path.join(RESULTS_ROOT, "results_baselines")
+
+#: The GA crossover x mutation grid written by ``run.run_ablation``.
+DEFAULT_ABLATION_RESULTS_DIR = os.path.join(RESULTS_ROOT, "results_ablation")
+
+#: The PSO c1 / c2 study written by ``run.run_pso_ablation``.
+DEFAULT_PSO_ABLATION_RESULTS_DIR = os.path.join(RESULTS_ROOT, "results_pso_ablation")
 
 #: Trained Q-tables, training histories and the calibrated state bins.
 #: Nested under ``DEFAULT_RESULTS_DIR`` so the two move together; pass

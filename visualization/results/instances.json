@@ -1,0 +1,5216 @@
+{
+  "train": [
+    {
+      "name": "train_1",
+      "split": "train",
+      "index": 0,
+      "seed": 2000,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.3453710537315855,
+          "height": 4.867909285585219,
+          "access_point": [
+            -0.07658001897724498,
+            0.804698932947205
+          ],
+          "l_cutout_width": 1.9274796627840192,
+          "l_cutout_height": 2.339458689180601
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.7621731990084837,
+          "height": 4.489802106855788,
+          "access_point": [
+            0.22384902023041997,
+            -1.0830690090428616
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.266064228115182,
+          "height": 2.969748802877233,
+          "access_point": [
+            0.9595321040918896,
+            -1.0618775963532117
+          ],
+          "l_cutout_width": 2.0742441392318236,
+          "l_cutout_height": 1.3459947209295087
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.031450864434753,
+          "height": 3.558809176726408,
+          "access_point": [
+            1.3963049284596232,
+            -0.8808183804429549
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.386123446552821,
+          "height": 4.625873100256957,
+          "access_point": [
+            0.3128978007082224,
+            0.27995243002278203
+          ],
+          "l_cutout_width": 1.749627462945236,
+          "l_cutout_height": 2.257070986385804
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.1128764905037745,
+          "height": 4.8703868170333955,
+          "access_point": [
+            0.6918886216280495,
+            1.2343024979115835
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.4467204591905904,
+          "height": 4.7026486715865765,
+          "access_point": [
+            0.24740852253809686,
+            1.4545585677626565
+          ],
+          "l_cutout_width": 1.2681731912877015,
+          "l_cutout_height": 1.1656990525229447
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.360055061095212,
+          "height": 2.6319645035850163,
+          "access_point": [
+            0.036551941454618486,
+            -0.9096517996545848
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 137.50589918581886,
+        "occupancy": 0.15278433242868764,
+        "free_space_ratio": 0.8472156675713124,
+        "mean_machine_area": 17.188237398227358,
+        "machine_area_cv": 0.2422926056645038,
+        "mean_aspect_ratio": 1.2684964199167719,
+        "max_aspect_ratio": 1.7732355756867955,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.15213442837587,
+        "max_diagonal_over_extent": 0.23666438431102985,
+        "random_feasibility_rate": 0.0375
+      }
+    },
+    {
+      "name": "train_2",
+      "split": "train",
+      "index": 1,
+      "seed": 2001,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.759295292683012,
+          "height": 3.4061291590987333,
+          "access_point": [
+            -1.341916790155985,
+            0.45342740270819193
+          ],
+          "l_cutout_width": 2.311291545458724,
+          "l_cutout_height": 1.4170479915186687
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.706723278810281,
+          "height": 4.363835411195847,
+          "access_point": [
+            0.38305304580107946,
+            0.3602632743977012
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.7588280989902336,
+          "height": 2.8793198999719043,
+          "access_point": [
+            0.42523034138766147,
+            -1.2437136019644024
+          ],
+          "l_cutout_width": 1.8168295906377865,
+          "l_cutout_height": 1.1915792141116344
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.982869793050344,
+          "height": 3.383588442597334,
+          "access_point": [
+            -0.3726778905818775,
+            1.273319009588389
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.414724269074187,
+          "height": 3.1355396594193596,
+          "access_point": [
+            0.6265420326501192,
+            -0.11535802239820514
+          ],
+          "l_cutout_width": 1.3008047921691952,
+          "l_cutout_height": 1.352886447544716
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.407767338021067,
+          "height": 4.483590465911701,
+          "access_point": [
+            1.0029289689896421,
+            -1.0097665695652065
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.6538448885894166,
+          "height": 4.8473570219729645,
+          "access_point": [
+            -0.6399896767821259,
+            0.9033844571624914
+          ],
+          "l_cutout_width": 1.5443886108158233,
+          "l_cutout_height": 1.4474953976437681
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.066022433389392,
+          "height": 2.560300089752639,
+          "access_point": [
+            -0.5080619715716497,
+            0.9680736927999334
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 114.80114992469963,
+        "occupancy": 0.12755683324966627,
+        "free_space_ratio": 0.8724431667503337,
+        "mean_machine_area": 14.350143740587454,
+        "machine_area_cv": 0.23136101118510108,
+        "mean_aspect_ratio": 1.4103691426783296,
+        "max_aspect_ratio": 1.9786830667489612,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1055143471981892,
+        "max_diagonal_over_extent": 0.2139478220898768,
+        "random_feasibility_rate": 0.0595
+      }
+    },
+    {
+      "name": "train_3",
+      "split": "train",
+      "index": 2,
+      "seed": 2002,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.182473421106044,
+          "height": 3.750708593494878,
+          "access_point": [
+            0.8325092116196453,
+            0.19217174008533755
+          ],
+          "l_cutout_width": 2.4010957407138336,
+          "l_cutout_height": 1.7745824610083774
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.7950996477671595,
+          "height": 2.5042120388243645,
+          "access_point": [
+            -0.6983341950768988,
+            0.03764208349928322
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.9807517321977866,
+          "height": 2.6309675973119506,
+          "access_point": [
+            0.8204434893201382,
+            1.1318549295295837
+          ],
+          "l_cutout_width": 1.0531198888292768,
+          "l_cutout_height": 1.004816354570209
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.52465641344021,
+          "height": 3.4920104179455835,
+          "access_point": [
+            -0.40265555067393066,
+            0.045483079224172496
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.722679934360365,
+          "height": 3.4930203801912496,
+          "access_point": [
+            -1.3751175901148165,
+            0.11675570901068744
+          ],
+          "l_cutout_width": 1.0196620219026837,
+          "l_cutout_height": 1.2616912561105202
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.956593801484305,
+          "height": 4.619480685904168,
+          "access_point": [
+            1.2658387598874024,
+            0.28865401494785026
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.986462017996554,
+          "height": 4.468160953021934,
+          "access_point": [
+            -0.5207787531720732,
+            -0.7150614132318285
+          ],
+          "l_cutout_width": 1.7663199497939173,
+          "l_cutout_height": 1.5448388778149091
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.1175863247018314,
+          "height": 3.2232703400129017,
+          "access_point": [
+            -0.3320740294764759,
+            -0.07083686213490781
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 130.96496857715465,
+        "occupancy": 0.14551663175239404,
+        "free_space_ratio": 0.854483368247606,
+        "mean_machine_area": 16.37062107214433,
+        "machine_area_cv": 0.350826948940082,
+        "mean_aspect_ratio": 1.449287018919216,
+        "max_aspect_ratio": 2.2732137553910956,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 0.9074310058177353,
+        "max_diagonal_over_extent": 0.25126482603757355,
+        "random_feasibility_rate": 0.039
+      }
+    },
+    {
+      "name": "train_4",
+      "split": "train",
+      "index": 3,
+      "seed": 2003,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.338291169250707,
+          "height": 4.9123294941734175,
+          "access_point": [
+            0.5799292673494305,
+            -0.6485820940098892
+          ],
+          "l_cutout_width": 1.4469109084938214,
+          "l_cutout_height": 2.15076568877464
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.410314289446262,
+          "height": 4.623422656928035,
+          "access_point": [
+            0.6213164136694869,
+            -1.2023532829571213
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.5001723767296857,
+          "height": 3.2305938763545186,
+          "access_point": [
+            0.8298355564005591,
+            -0.3424370523573306
+          ],
+          "l_cutout_width": 1.1203510385955553,
+          "l_cutout_height": 1.2472438670202066
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.736993271129955,
+          "height": 3.373529241725861,
+          "access_point": [
+            -1.415367624933395,
+            0.4614082230832548
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.717334441919878,
+          "height": 3.1935313335199886,
+          "access_point": [
+            -0.22836346519689688,
+            -1.2877839020282118
+          ],
+          "l_cutout_width": 2.1214915891321406,
+          "l_cutout_height": 1.256348841550682
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.6367412415990295,
+          "height": 4.093572441560676,
+          "access_point": [
+            -1.2495041002692209,
+            -0.5388426200972797
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.45875372835259,
+          "height": 2.7569843068644504,
+          "access_point": [
+            -1.037246863533833,
+            -1.1370071590572937
+          ],
+          "l_cutout_width": 1.3697129032819473,
+          "l_cutout_height": 1.1887532996455477
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.044554967852169,
+          "height": 3.8757426143321636,
+          "access_point": [
+            0.4041096576445864,
+            0.4633469864855808
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 118.03649207407508,
+        "occupancy": 0.13115165786008343,
+        "free_space_ratio": 0.8688483421399166,
+        "mean_machine_area": 14.754561509259386,
+        "machine_area_cv": 0.32260202784943937,
+        "mean_aspect_ratio": 1.328678082084289,
+        "max_aspect_ratio": 1.6172575655403645,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1790386890021751,
+        "max_diagonal_over_extent": 0.23722361175149562,
+        "random_feasibility_rate": 0.061
+      }
+    },
+    {
+      "name": "train_5",
+      "split": "train",
+      "index": 4,
+      "seed": 2004,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.573636561747541,
+          "height": 4.474100910167194,
+          "access_point": [
+            -0.8810573158743392,
+            -0.38907442008521764
+          ],
+          "l_cutout_width": 1.8592031380442309,
+          "l_cutout_height": 1.7559348132571682
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.804643269357013,
+          "height": 4.762303148260841,
+          "access_point": [
+            -1.0236825465908992,
+            0.05640229662246776
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.683841416081461,
+          "height": 4.493971663462165,
+          "access_point": [
+            0.48975476696119724,
+            1.1678113164172337
+          ],
+          "l_cutout_width": 1.794533908570326,
+          "l_cutout_height": 1.76746048327714
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.1760722986883136,
+          "height": 4.0681193667139475,
+          "access_point": [
+            0.22172279883264534,
+            -0.4623382603524462
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.568672222022113,
+          "height": 2.7831286913266102,
+          "access_point": [
+            -1.2664274004598082,
+            -1.1261585892442363
+          ],
+          "l_cutout_width": 2.584838043169287,
+          "l_cutout_height": 1.1964564178488284
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.826847854852177,
+          "height": 4.024857314851359,
+          "access_point": [
+            -0.4744925733235872,
+            0.172666357327661
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.2493032204059595,
+          "height": 3.2448925210486066,
+          "access_point": [
+            0.09450778759834844,
+            -0.22100639936089062
+          ],
+          "l_cutout_width": 1.557770788920632,
+          "l_cutout_height": 1.366037854283066
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.786432075207513,
+          "height": 3.8420820665886963,
+          "access_point": [
+            -0.009329525539250039,
+            1.3518717520156072
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 136.47485316219834,
+        "occupancy": 0.15163872573577594,
+        "free_space_ratio": 0.848361274264224,
+        "mean_machine_area": 17.059356645274793,
+        "machine_area_cv": 0.2174330441576832,
+        "mean_aspect_ratio": 1.3116107966706565,
+        "max_aspect_ratio": 2.0008676707535726,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 0.9449252804949312,
+        "max_diagonal_over_extent": 0.24152716561074408,
+        "random_feasibility_rate": 0.036
+      }
+    },
+    {
+      "name": "train_6",
+      "split": "train",
+      "index": 5,
+      "seed": 2005,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.3511129918748646,
+          "height": 2.6910048813874123,
+          "access_point": [
+            -0.8716153249619504,
+            0.44490910543070816
+          ],
+          "l_cutout_width": 1.114056487475459,
+          "l_cutout_height": 1.154073943588294
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.475705482160567,
+          "height": 3.500653858694263,
+          "access_point": [
+            1.2673914317985542,
+            -1.1561034934027083
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.3612681803037603,
+          "height": 4.9560580391058,
+          "access_point": [
+            -1.4914867229427473,
+            -0.7058958300155161
+          ],
+          "l_cutout_width": 1.2714993529636405,
+          "l_cutout_height": 1.0466649814254063
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.664858418984602,
+          "height": 4.868949896869781,
+          "access_point": [
+            0.7618458744652008,
+            -1.372747351639246
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.21270834014585,
+          "height": 3.276513275271787,
+          "access_point": [
+            -0.544394151275432,
+            -1.4954775609259296
+          ],
+          "l_cutout_width": 1.6063456419341602,
+          "l_cutout_height": 1.5452757219049802
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.395210993699923,
+          "height": 3.165895126373447,
+          "access_point": [
+            -1.276224472017049,
+            -0.07573172195888045
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.414978303376953,
+          "height": 3.617550541614758,
+          "access_point": [
+            0.8831651438309152,
+            0.930205996187452
+          ],
+          "l_cutout_width": 2.6946760090084902,
+          "l_cutout_height": 1.5507378336064748
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.565220036211641,
+          "height": 4.0239122179737175,
+          "access_point": [
+            1.1668766316075994,
+            -0.0877405065213901
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 138.70702904448592,
+        "occupancy": 0.1541189211605399,
+        "free_space_ratio": 0.8458810788394601,
+        "mean_machine_area": 17.33837863056074,
+        "machine_area_cv": 0.30634406960449584,
+        "mean_aspect_ratio": 1.4611034429504512,
+        "max_aspect_ratio": 1.704166050465535,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.4046195697717088,
+        "max_diagonal_over_extent": 0.24899195436659968,
+        "random_feasibility_rate": 0.0365
+      }
+    },
+    {
+      "name": "train_7",
+      "split": "train",
+      "index": 6,
+      "seed": 2006,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.664564908891121,
+          "height": 2.6780426809379283,
+          "access_point": [
+            1.2332656469609162,
+            -0.5307662564643525
+          ],
+          "l_cutout_width": 1.7484511998071466,
+          "l_cutout_height": 1.023275486212376
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.738840316545728,
+          "height": 3.6079935038713895,
+          "access_point": [
+            -0.9279099138431561,
+            0.18377414226742816
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.333303118619808,
+          "height": 3.0013531224550634,
+          "access_point": [
+            0.547447422232243,
+            -0.8660450491113758
+          ],
+          "l_cutout_width": 1.5293224894161983,
+          "l_cutout_height": 1.1830642998717449
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.853448555504781,
+          "height": 3.660206260207498,
+          "access_point": [
+            -0.29010752294301856,
+            0.9055350576019072
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.5200312080317078,
+          "height": 4.135915299003441,
+          "access_point": [
+            0.7668888069873034,
+            0.5154911536073499
+          ],
+          "l_cutout_width": 1.4527555652785393,
+          "l_cutout_height": 1.2100053711632317
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.3105655982130218,
+          "height": 2.765974811638968,
+          "access_point": [
+            -0.07457881749541428,
+            0.1327860832339025
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.181910186407817,
+          "height": 4.013771222533344,
+          "access_point": [
+            0.08033320857131798,
+            1.2167316611989407
+          ],
+          "l_cutout_width": 1.7365586683457614,
+          "l_cutout_height": 1.4602314368185254
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.812999098311125,
+          "height": 4.05500451074739,
+          "access_point": [
+            -0.05756108525567538,
+            1.278072954424752
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 108.21856009274826,
+        "occupancy": 0.12024284454749808,
+        "free_space_ratio": 0.8797571554525019,
+        "mean_machine_area": 13.527320011593533,
+        "machine_area_cv": 0.2103682712887019,
+        "mean_aspect_ratio": 1.2760602980662643,
+        "max_aspect_ratio": 1.7769662219076852,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 0.9798856301305463,
+        "max_diagonal_over_extent": 0.20978301462470264,
+        "random_feasibility_rate": 0.0785
+      }
+    },
+    {
+      "name": "train_8",
+      "split": "train",
+      "index": 7,
+      "seed": 2007,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.6080328846768457,
+          "height": 4.153920724084423,
+          "access_point": [
+            1.0985814274165975,
+            1.2088749651158945
+          ],
+          "l_cutout_width": 1.6885585113791808,
+          "l_cutout_height": 1.6586191802064705
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.1042700184629135,
+          "height": 3.377326879016884,
+          "access_point": [
+            0.1437780420050916,
+            -0.9528029449278456
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.790684537256476,
+          "height": 2.6655041064846126,
+          "access_point": [
+            -0.08852390743631888,
+            1.0697382753900953
+          ],
+          "l_cutout_width": 2.1036493907324867,
+          "l_cutout_height": 1.0030634776484897
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.2224293735801743,
+          "height": 4.491973349386587,
+          "access_point": [
+            -0.7016874548208825,
+            1.4524083516258863
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.0152657301558445,
+          "height": 4.1604842413997005,
+          "access_point": [
+            -0.5142475881683229,
+            1.0999211395675812
+          ],
+          "l_cutout_width": 1.571952701957417,
+          "l_cutout_height": 1.2284078959125435
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.272715504492922,
+          "height": 4.693694129337501,
+          "access_point": [
+            0.7839704554410853,
+            -0.9104817969326695
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.482019976227521,
+          "height": 4.826143450214477,
+          "access_point": [
+            1.241505884875707,
+            -0.7677351953800168
+          ],
+          "l_cutout_width": 1.0133522058200797,
+          "l_cutout_height": 1.8142224910721134
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.7857123569693485,
+          "height": 4.514989390338921,
+          "access_point": [
+            0.9134743484306305,
+            -0.2885356852149852
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 137.43657714845716,
+        "occupancy": 0.15270730794273019,
+        "free_space_ratio": 0.8472926920572699,
+        "mean_machine_area": 17.179572143557145,
+        "machine_area_cv": 0.24375903742820393,
+        "mean_aspect_ratio": 1.4033653802869086,
+        "max_aspect_ratio": 2.1724538045801376,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.2646068589657395,
+        "max_diagonal_over_extent": 0.24463032580351574,
+        "random_feasibility_rate": 0.03
+      }
+    },
+    {
+      "name": "train_9",
+      "split": "train",
+      "index": 8,
+      "seed": 2008,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.6700535150599745,
+          "height": 3.859751054540518,
+          "access_point": [
+            -0.34518018119852956,
+            -1.3482814782280714
+          ],
+          "l_cutout_width": 2.3733917863487193,
+          "l_cutout_height": 1.358655628260084
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.736500027359499,
+          "height": 4.497752229683407,
+          "access_point": [
+            1.4330973549899868,
+            1.1997006779639112
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 4.369239745298018,
+          "height": 3.0547409636279976,
+          "access_point": [
+            0.726293738979408,
+            0.1262847115909005
+          ],
+          "l_cutout_width": 1.6692816864280302,
+          "l_cutout_height": 1.4133299543640014
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.8202564898872486,
+          "height": 3.5629267833608145,
+          "access_point": [
+            0.20035135273183613,
+            0.15722308382737404
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.850492223126515,
+          "height": 4.05358598652912,
+          "access_point": [
+            -0.9777128443467231,
+            0.42991993745754264
+          ],
+          "l_cutout_width": 2.3496416022218387,
+          "l_cutout_height": 1.9408830453205415
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.791437247643161,
+          "height": 3.149579793748665,
+          "access_point": [
+            -1.3323924920762527,
+            0.31790409058586566
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.409443714218464,
+          "height": 4.646701903759611,
+          "access_point": [
+            -0.708003393286614,
+            0.20348701650655587
+          ],
+          "l_cutout_width": 1.2197173883341121,
+          "l_cutout_height": 2.047869965643894
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.279455376287047,
+          "height": 4.265532253744342,
+          "access_point": [
+            -1.3911629887451746,
+            -0.39313757718584874
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 143.29517892345137,
+        "occupancy": 0.15921686547050154,
+        "free_space_ratio": 0.8407831345294985,
+        "mean_machine_area": 17.91189736543142,
+        "machine_area_cv": 0.24944458789108512,
+        "mean_aspect_ratio": 1.3062218344004357,
+        "max_aspect_ratio": 1.8387968004932265,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.109095936807871,
+        "max_diagonal_over_extent": 0.24298424202111357,
+        "random_feasibility_rate": 0.028
+      }
+    },
+    {
+      "name": "train_10",
+      "split": "train",
+      "index": 9,
+      "seed": 2009,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.8166435427110468,
+          "height": 4.733441392962723,
+          "access_point": [
+            0.47897622631322734,
+            1.4885078778831735
+          ],
+          "l_cutout_width": 1.375615561231473,
+          "l_cutout_height": 1.9801167431707505
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.024326216645787,
+          "height": 4.5406310684033135,
+          "access_point": [
+            0.35620998844261464,
+            -1.0347710871328555
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.630493320806524,
+          "height": 2.914061917113372,
+          "access_point": [
+            0.5492463241916994,
+            -1.3229370815339543
+          ],
+          "l_cutout_width": 1.4302602552612833,
+          "l_cutout_height": 1.3832220355984217
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.478100467702733,
+          "height": 4.8500996567872585,
+          "access_point": [
+            1.4735882428475886,
+            -0.019976162345538562
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.768697715674665,
+          "height": 2.6758647639474065,
+          "access_point": [
+            0.009436888203412153,
+            1.2977013968944946
+          ],
+          "l_cutout_width": 1.801701786279642,
+          "l_cutout_height": 1.035956229682649
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.773759800503112,
+          "height": 2.9066022009988064,
+          "access_point": [
+            0.1732395343396007,
+            0.8078891387450513
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.189851641038384,
+          "height": 2.6020269469382935,
+          "access_point": [
+            0.5428977510466311,
+            1.388071430305867
+          ],
+          "l_cutout_width": 1.25278380208971,
+          "l_cutout_height": 1.1569610225141016
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.937664903687691,
+          "height": 4.0830448104774195,
+          "access_point": [
+            0.9589113142438368,
+            1.1429598570069652
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 117.21542199158137,
+        "occupancy": 0.13023935776842374,
+        "free_space_ratio": 0.8697606422315762,
+        "mean_machine_area": 14.65192774894767,
+        "machine_area_cv": 0.3134583675158893,
+        "mean_aspect_ratio": 1.3878144928395246,
+        "max_aspect_ratio": 2.15582558333955,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.3338216331304902,
+        "max_diagonal_over_extent": 0.22004254760186548,
+        "random_feasibility_rate": 0.0555
+      }
+    },
+    {
+      "name": "train_11",
+      "split": "train",
+      "index": 10,
+      "seed": 2010,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.4174703186391238,
+          "height": 3.716631279403093,
+          "access_point": [
+            -0.8141779385240582,
+            0.13998787339155294
+          ],
+          "l_cutout_width": 1.3167820920159314,
+          "l_cutout_height": 1.8354965016828642
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.7694996369848415,
+          "height": 4.695358746022122,
+          "access_point": [
+            -0.9286252071846396,
+            0.7675728554439405
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.812809531209442,
+          "height": 4.013236100483576,
+          "access_point": [
+            -0.30406945330097246,
+            -0.011547733999489829
+          ],
+          "l_cutout_width": 1.5623556686099798,
+          "l_cutout_height": 1.4992735394439032
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.351549243399554,
+          "height": 3.0578327471735056,
+          "access_point": [
+            -1.4044645361436898,
+            0.446840653022452
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.600804152299559,
+          "height": 4.139868054467772,
+          "access_point": [
+            1.2548087359627882,
+            -0.7921347771653688
+          ],
+          "l_cutout_width": 1.1459387313072549,
+          "l_cutout_height": 1.3974025240108596
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.420212990509935,
+          "height": 4.917766248436685,
+          "access_point": [
+            -1.0806799806507992,
+            -1.1821079969349233
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.0496297868769844,
+          "height": 4.964180953399142,
+          "access_point": [
+            -1.0847743187000107,
+            0.9583659845013712
+          ],
+          "l_cutout_width": 1.0675664980728239,
+          "l_cutout_height": 1.465245234107356
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.86059129098007,
+          "height": 3.951755564129807,
+          "access_point": [
+            -0.4056778659363869,
+            0.34231595331963005
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 134.00227864614294,
+        "occupancy": 0.1488914207179366,
+        "free_space_ratio": 0.8511085792820634,
+        "mean_machine_area": 16.750284830767868,
+        "machine_area_cv": 0.3119083701219416,
+        "mean_aspect_ratio": 1.312318093529898,
+        "max_aspect_ratio": 1.7501118229393793,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.109110298749543,
+        "max_diagonal_over_extent": 0.24395612933648467,
+        "random_feasibility_rate": 0.0425
+      }
+    },
+    {
+      "name": "train_12",
+      "split": "train",
+      "index": 11,
+      "seed": 2011,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.555111383109873,
+          "height": 4.770732347394752,
+          "access_point": [
+            -0.7544561593143154,
+            -0.5733940340326097
+          ],
+          "l_cutout_width": 1.3784033422867898,
+          "l_cutout_height": 1.0777317702875293
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.078195251917405,
+          "height": 3.2327072863840134,
+          "access_point": [
+            -0.8509147873514336,
+            -0.8336546415671707
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.1145766357006255,
+          "height": 2.6187524790549235,
+          "access_point": [
+            -0.529502159221387,
+            1.3266880477575356
+          ],
+          "l_cutout_width": 1.507471871530694,
+          "l_cutout_height": 1.1873102874072
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.3343642353213676,
+          "height": 3.225987291455632,
+          "access_point": [
+            0.3931552554901594,
+            0.3249031267566336
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.498265126085707,
+          "height": 4.578330921230584,
+          "access_point": [
+            1.1535493391346998,
+            0.1431471152240158
+          ],
+          "l_cutout_width": 1.2255575508985046,
+          "l_cutout_height": 1.835968847238085
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.601603975804577,
+          "height": 3.1120612396794463,
+          "access_point": [
+            0.7729532690277505,
+            1.3019767339575363
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.760630598917578,
+          "height": 3.9404866448021414,
+          "access_point": [
+            0.8378923913855627,
+            -0.9568482802810673
+          ],
+          "l_cutout_width": 1.1656073239148312,
+          "l_cutout_height": 1.4304748390598412
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.762860828756775,
+          "height": 4.808375569367943,
+          "access_point": [
+            0.7025123105945918,
+            -0.0036628929382322983
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 121.74448224912867,
+        "occupancy": 0.1352716469434763,
+        "free_space_ratio": 0.8647283530565237,
+        "mean_machine_area": 15.218060281141083,
+        "machine_area_cv": 0.3262747335524586,
+        "mean_aspect_ratio": 1.2322758435932946,
+        "max_aspect_ratio": 1.799965856835633,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.091030982805527,
+        "max_diagonal_over_extent": 0.2255987561288605,
+        "random_feasibility_rate": 0.067
+      }
+    },
+    {
+      "name": "train_13",
+      "split": "train",
+      "index": 12,
+      "seed": 2012,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.2892179371381274,
+          "height": 3.4120608530063374,
+          "access_point": [
+            -0.5147114712572517,
+            -1.470562252836352
+          ],
+          "l_cutout_width": 1.5392920122367033,
+          "l_cutout_height": 1.4405822321092325
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.7077315370041415,
+          "height": 3.3172475075926418,
+          "access_point": [
+            -1.1795715925978034,
+            1.4474142957030334
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.765858736815294,
+          "height": 4.836213858772426,
+          "access_point": [
+            -0.6190379963828508,
+            -1.0053633658287704
+          ],
+          "l_cutout_width": 2.209781071696028,
+          "l_cutout_height": 1.836041657654488
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.7023135253872965,
+          "height": 3.2607791676432663,
+          "access_point": [
+            -0.4081683404406702,
+            -0.6234511694972047
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.873621366919203,
+          "height": 4.642850928096012,
+          "access_point": [
+            0.8158859782752086,
+            -0.21515710583853398
+          ],
+          "l_cutout_width": 1.0464215614414891,
+          "l_cutout_height": 1.2282615187319905
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.138746191615528,
+          "height": 3.385551015761334,
+          "access_point": [
+            -0.2564646937816297,
+            -0.01768460619288703
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.916723838108374,
+          "height": 3.140189006021784,
+          "access_point": [
+            0.4708500353747187,
+            -1.0819052958758468
+          ],
+          "l_cutout_width": 2.0018185665459667,
+          "l_cutout_height": 1.1846483918579902
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.320731853058039,
+          "height": 2.8699862736889665,
+          "access_point": [
+            0.27780094568458313,
+            -0.26490008433748513
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 131.063150700998,
+        "occupancy": 0.14562572300110888,
+        "free_space_ratio": 0.8543742769988911,
+        "mean_machine_area": 16.38289383762475,
+        "machine_area_cv": 0.27600180663890583,
+        "mean_aspect_ratio": 1.3817673227406786,
+        "max_aspect_ratio": 1.8841935395487877,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.0019626163330349,
+        "max_diagonal_over_extent": 0.2508520844833813,
+        "random_feasibility_rate": 0.0405
+      }
+    },
+    {
+      "name": "train_14",
+      "split": "train",
+      "index": 13,
+      "seed": 2013,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.275532316303909,
+          "height": 2.6297670948601577,
+          "access_point": [
+            -0.29462776769063637,
+            1.2018516661083356
+          ],
+          "l_cutout_width": 1.8597874452734926,
+          "l_cutout_height": 1.1223997362750033
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.538981067755186,
+          "height": 3.5239954808298974,
+          "access_point": [
+            0.16233653754474808,
+            0.195606506192338
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.297944760368481,
+          "height": 4.746120658822654,
+          "access_point": [
+            -1.3334081297516098,
+            -0.31864689328278395
+          ],
+          "l_cutout_width": 1.1336099449451296,
+          "l_cutout_height": 2.1328110645006015
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.102553348228691,
+          "height": 3.8941034141696114,
+          "access_point": [
+            1.3338255931475689,
+            0.5914399916344499
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.24015098304107,
+          "height": 3.7475044337525087,
+          "access_point": [
+            -0.670291616897889,
+            -0.9530073909565671
+          ],
+          "l_cutout_width": 2.3537499068411747,
+          "l_cutout_height": 1.510459036349494
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.181904671867185,
+          "height": 3.043636532873355,
+          "access_point": [
+            -1.118394890587587,
+            -0.5060882592334935
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.169728416229992,
+          "height": 4.497287764000275,
+          "access_point": [
+            0.3751733070981662,
+            0.4262831067181696
+          ],
+          "l_cutout_width": 1.8315562710361566,
+          "l_cutout_height": 1.3031365210681198
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.768129103426963,
+          "height": 4.688920880295694,
+          "access_point": [
+            -1.458656462177143,
+            -0.7550016825265059
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 143.01443999524838,
+        "occupancy": 0.15890493332805375,
+        "free_space_ratio": 0.8410950666719462,
+        "mean_machine_area": 17.876804999406048,
+        "machine_area_cv": 0.28045914155105306,
+        "mean_aspect_ratio": 1.3437498489137978,
+        "max_aspect_ratio": 1.702537282589124,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1155862988636405,
+        "max_diagonal_over_extent": 0.24778416319108157,
+        "random_feasibility_rate": 0.0285
+      }
+    },
+    {
+      "name": "train_15",
+      "split": "train",
+      "index": 14,
+      "seed": 2014,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.9460595231634827,
+          "height": 3.496396917651779,
+          "access_point": [
+            1.2480687872018472,
+            1.3205233187855492
+          ],
+          "l_cutout_width": 1.4156059050254497,
+          "l_cutout_height": 1.5175125073949298
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.06885967276593,
+          "height": 3.5024533673964777,
+          "access_point": [
+            -1.1235389593247942,
+            0.5324269752660045
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.920501640182474,
+          "height": 3.611688561298494,
+          "access_point": [
+            -0.08517307328517854,
+            -0.7255557322209596
+          ],
+          "l_cutout_width": 1.1812763815960166,
+          "l_cutout_height": 1.1960050759579084
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.6810277245135365,
+          "height": 3.150595699115792,
+          "access_point": [
+            -0.2392906753307682,
+            0.8073567911833752
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.041466706060424,
+          "height": 2.699973064936182,
+          "access_point": [
+            0.7609255932596053,
+            0.4336742674498628
+          ],
+          "l_cutout_width": 2.047499930583033,
+          "l_cutout_height": 1.1678916311379255
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.150814999900241,
+          "height": 3.189927592779174,
+          "access_point": [
+            1.012343310543482,
+            0.4138585948123801
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.837852730849782,
+          "height": 3.779682908554816,
+          "access_point": [
+            -0.9061959563067878,
+            -1.1730595567352906
+          ],
+          "l_cutout_width": 2.0505762215381402,
+          "l_cutout_height": 1.2182197933373997
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.891835852914337,
+          "height": 3.341424903614705,
+          "access_point": [
+            -1.0537185614088909,
+            -1.0267795598064762
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 114.3392015749708,
+        "occupancy": 0.1270435573055231,
+        "free_space_ratio": 0.8729564426944769,
+        "mean_machine_area": 14.29240019687135,
+        "machine_area_cv": 0.24937858434290308,
+        "mean_aspect_ratio": 1.406812786250645,
+        "max_aspect_ratio": 1.867228518511012,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1944984071004163,
+        "max_diagonal_over_extent": 0.23182015873495956,
+        "random_feasibility_rate": 0.056
+      }
+    }
+  ],
+  "val": [
+    {
+      "name": "val_1",
+      "split": "val",
+      "index": 0,
+      "seed": 3000,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.916629384313376,
+          "height": 3.2806916922945755,
+          "access_point": [
+            -0.6582433793475112,
+            0.4420863458683164
+          ],
+          "l_cutout_width": 1.2053175453643925,
+          "l_cutout_height": 1.432145442793154
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.328037529508351,
+          "height": 3.051377147133958,
+          "access_point": [
+            0.1371992531214532,
+            -0.8563121995320468
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.6359555058637714,
+          "height": 4.584953241130113,
+          "access_point": [
+            0.7394712458436512,
+            -0.5615529655891587
+          ],
+          "l_cutout_width": 1.507449295682832,
+          "l_cutout_height": 1.5484982238913774
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.8527967550148783,
+          "height": 4.409612300295139,
+          "access_point": [
+            0.15481009404497303,
+            1.4868112292060922
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.659699427042823,
+          "height": 4.963920147328249,
+          "access_point": [
+            -0.3671318652451139,
+            -0.8172837117806153
+          ],
+          "l_cutout_width": 1.639008617831682,
+          "l_cutout_height": 1.4916934129123571
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.4235686136178165,
+          "height": 4.930743931514245,
+          "access_point": [
+            -1.0972525283160057,
+            -1.2739146826722658
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.544558373626387,
+          "height": 3.5651064000571493,
+          "access_point": [
+            -1.1334981974738527,
+            0.4418205676547087
+          ],
+          "l_cutout_width": 2.626159075880281,
+          "l_cutout_height": 1.0537447805504738
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.531807777409343,
+          "height": 3.711131106756264,
+          "access_point": [
+            -0.09678890232182313,
+            -0.0838481410363503
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 138.92866177309696,
+        "occupancy": 0.15436517974788552,
+        "free_space_ratio": 0.8456348202521144,
+        "mean_machine_area": 17.36608272163712,
+        "machine_area_cv": 0.2375583048344833,
+        "mean_aspect_ratio": 1.3530902571789294,
+        "max_aspect_ratio": 1.5552294241589835,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.0006776519147804,
+        "max_diagonal_over_extent": 0.24432976856150068,
+        "random_feasibility_rate": 0.036
+      }
+    },
+    {
+      "name": "val_2",
+      "split": "val",
+      "index": 1,
+      "seed": 3001,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.8741212047410483,
+          "height": 3.610302044931654,
+          "access_point": [
+            -0.44460259076496955,
+            -0.7715540310643842
+          ],
+          "l_cutout_width": 1.2651668657673036,
+          "l_cutout_height": 1.544820486007321
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.783884324110618,
+          "height": 3.6896001786633272,
+          "access_point": [
+            1.34795481081472,
+            1.230783659416495
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 4.808558567710132,
+          "height": 3.422356587119273,
+          "access_point": [
+            1.0857818817098632,
+            1.3425059526816265
+          ],
+          "l_cutout_width": 1.912453610022868,
+          "l_cutout_height": 1.020555338794147
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.0582232961953055,
+          "height": 2.5589707575437277,
+          "access_point": [
+            -0.17092261031077682,
+            1.4723996842232845
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.869137659293248,
+          "height": 2.9488049123539555,
+          "access_point": [
+            -0.26936971608981386,
+            1.3116573124097473
+          ],
+          "l_cutout_width": 1.8725006907897237,
+          "l_cutout_height": 1.0072541235193189
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.700200153473706,
+          "height": 3.725973892924359,
+          "access_point": [
+            -0.49714616817730484,
+            1.1247327460634233
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.218846664403635,
+          "height": 4.629152672944819,
+          "access_point": [
+            -1.0034061139574582,
+            -0.23177000274028825
+          ],
+          "l_cutout_width": 1.1615671302829438,
+          "l_cutout_height": 1.1115145185270303
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.8841485251861276,
+          "height": 4.328385691612555,
+          "access_point": [
+            1.4127901625416888,
+            0.8107235609447665
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 137.16068253025296,
+        "occupancy": 0.15240075836694772,
+        "free_space_ratio": 0.8475992416330522,
+        "mean_machine_area": 17.14508531628162,
+        "machine_area_cv": 0.22678916010504918,
+        "mean_aspect_ratio": 1.473044616417624,
+        "max_aspect_ratio": 1.9903445069236763,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.394021287833239,
+        "max_diagonal_over_extent": 0.23253533775891908,
+        "random_feasibility_rate": 0.035
+      }
+    },
+    {
+      "name": "val_3",
+      "split": "val",
+      "index": 2,
+      "seed": 3002,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.589299352674677,
+          "height": 4.0836895600275795,
+          "access_point": [
+            -0.3043313249162085,
+            -1.3130879011015915
+          ],
+          "l_cutout_width": 1.3067522925217303,
+          "l_cutout_height": 1.6047749226036374
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.160147943709315,
+          "height": 4.4074685685904305,
+          "access_point": [
+            -1.0144517870580034,
+            -1.4675932915310999
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.436415468511019,
+          "height": 3.35881718305342,
+          "access_point": [
+            -1.1308452761260337,
+            0.11677856146505805
+          ],
+          "l_cutout_width": 1.7533286300602675,
+          "l_cutout_height": 1.534485614081171
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.3339897194426946,
+          "height": 3.6768079444602546,
+          "access_point": [
+            0.8640671617547682,
+            0.8232413911933358
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.411736562469526,
+          "height": 3.796046146109437,
+          "access_point": [
+            1.1807987550603865,
+            -1.2965412736488098
+          ],
+          "l_cutout_width": 1.3904877879197426,
+          "l_cutout_height": 1.3723931231897213
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.002571152983406,
+          "height": 2.617762385388019,
+          "access_point": [
+            0.2710522207739463,
+            -1.328316383394525
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.1790044511457163,
+          "height": 4.591012190388504,
+          "access_point": [
+            -1.2273597108479015,
+            -1.1841531752057661
+          ],
+          "l_cutout_width": 1.2583432916673445,
+          "l_cutout_height": 1.9876213072235367
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.45972071716227,
+          "height": 3.417224303195715,
+          "access_point": [
+            -0.9760695416890997,
+            0.8318229175883904
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 120.37739111484706,
+        "occupancy": 0.1337526567942745,
+        "free_space_ratio": 0.8662473432057255,
+        "mean_machine_area": 15.047173889355882,
+        "machine_area_cv": 0.29696904509919037,
+        "mean_aspect_ratio": 1.3305482539604316,
+        "max_aspect_ratio": 1.618550570700875,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.4449424982565726,
+        "max_diagonal_over_extent": 0.2262076381068215,
+        "random_feasibility_rate": 0.0505
+      }
+    },
+    {
+      "name": "val_4",
+      "split": "val",
+      "index": 3,
+      "seed": 3003,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.66763890086921,
+          "height": 4.322076872886441,
+          "access_point": [
+            0.5123928770615214,
+            0.20841115101344632
+          ],
+          "l_cutout_width": 2.187802363818215,
+          "l_cutout_height": 2.0529120578361764
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.16322145647377,
+          "height": 4.831622845593268,
+          "access_point": [
+            -1.3330438199763868,
+            -0.7580645378494247
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 4.597062885347819,
+          "height": 4.771948459476051,
+          "access_point": [
+            -1.4711135678044545,
+            0.7950376153729057
+          ],
+          "l_cutout_width": 1.9205023025768684,
+          "l_cutout_height": 1.082418814763986
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.641731083464121,
+          "height": 3.394649661557405,
+          "access_point": [
+            0.6878705368301112,
+            -0.09740002589274122
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.820414943546151,
+          "height": 2.5261151569047,
+          "access_point": [
+            0.7171514642319066,
+            1.0830036394192488
+          ],
+          "l_cutout_width": 1.0859954768100666,
+          "l_cutout_height": 1.2117896171295977
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.81500224358251,
+          "height": 3.85689581759708,
+          "access_point": [
+            0.615548758850796,
+            -1.087369364532067
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.6470136666193245,
+          "height": 3.9127391620463396,
+          "access_point": [
+            -1.4245534766790602,
+            0.3658956404042022
+          ],
+          "l_cutout_width": 1.4685032927417287,
+          "l_cutout_height": 1.2860837932042732
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.579660938410726,
+          "height": 2.7943446822601867,
+          "access_point": [
+            0.45007273085620203,
+            0.5840168831829531
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 130.96912548772866,
+        "occupancy": 0.14552125054192072,
+        "free_space_ratio": 0.8544787494580792,
+        "mean_machine_area": 16.371140685966083,
+        "machine_area_cv": 0.21141031810818034,
+        "mean_aspect_ratio": 1.4788665652614599,
+        "max_aspect_ratio": 2.3040972331118996,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1512688898484655,
+        "max_diagonal_over_extent": 0.23259381963860298,
+        "random_feasibility_rate": 0.035
+      }
+    },
+    {
+      "name": "val_5",
+      "split": "val",
+      "index": 4,
+      "seed": 3004,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.483951795455548,
+          "height": 3.016176814232362,
+          "access_point": [
+            -1.258212138124541,
+            1.3265472812941264
+          ],
+          "l_cutout_width": 1.8221899143552855,
+          "l_cutout_height": 1.36387998596661
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.225192458300714,
+          "height": 3.9126746609105725,
+          "access_point": [
+            -1.3818937391978043,
+            -1.1080653190961436
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 4.206329751655511,
+          "height": 4.221741684613498,
+          "access_point": [
+            0.21050551059540323,
+            0.49347182773001963
+          ],
+          "l_cutout_width": 1.3750460750948057,
+          "l_cutout_height": 1.8746829210480627
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.0460627077055835,
+          "height": 4.819616204870616,
+          "access_point": [
+            -0.45239759897717224,
+            0.7426834421456627
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.810404234444453,
+          "height": 3.416327866478687,
+          "access_point": [
+            0.7204034851219587,
+            1.1035281143384923
+          ],
+          "l_cutout_width": 1.7552204538426794,
+          "l_cutout_height": 1.1981007833879636
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.528456562144395,
+          "height": 3.3573116947183257,
+          "access_point": [
+            0.5902317621511788,
+            0.4527212250014965
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.426296556208822,
+          "height": 2.504906706105586,
+          "access_point": [
+            -1.2729291756485028,
+            -0.6406271690917738
+          ],
+          "l_cutout_width": 2.1351759016024072,
+          "l_cutout_height": 1.0245429494886469
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.3163452432341844,
+          "height": 3.4630445828409924,
+          "access_point": [
+            -0.9348631566854857,
+            0.4763060695515784
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 96.66470692986564,
+        "occupancy": 0.10740522992207294,
+        "free_space_ratio": 0.8925947700779271,
+        "mean_machine_area": 12.083088366233206,
+        "machine_area_cv": 0.15927419165909706,
+        "mean_aspect_ratio": 1.282914526420707,
+        "max_aspect_ratio": 1.7670504635641493,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1927140265799734,
+        "max_diagonal_over_extent": 0.19865188096898873,
+        "random_feasibility_rate": 0.1015
+      }
+    }
+  ],
+  "test": [
+    {
+      "name": "test_1",
+      "split": "test",
+      "index": 0,
+      "seed": 1000,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.332069928101692,
+          "height": 4.174563898898125,
+          "access_point": [
+            -1.2025811882255488,
+            -0.44108846642956356
+          ],
+          "l_cutout_width": 1.7795506596229167,
+          "l_cutout_height": 1.5813519807651741
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.9349271827371926,
+          "height": 2.8257883753966477,
+          "access_point": [
+            0.5137304046907989,
+            -0.4073117521578733
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 4.466507121485957,
+          "height": 3.007530526835134,
+          "access_point": [
+            0.4985951267140776,
+            -0.8170109063792037
+          ],
+          "l_cutout_width": 1.5649091309428624,
+          "l_cutout_height": 1.020514529331268
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.922869386133486,
+          "height": 3.7186901856722665,
+          "access_point": [
+            -0.11515840908792097,
+            0.6424414674246006
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.247184448499917,
+          "height": 4.7200292200038225,
+          "access_point": [
+            -1.430119653828685,
+            1.0005188033536396
+          ],
+          "l_cutout_width": 1.5263970480867983,
+          "l_cutout_height": 2.103624400917834
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.836774465847617,
+          "height": 4.957720945487247,
+          "access_point": [
+            -0.9714537732644082,
+            0.5959672787289239
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.3265671339371488,
+          "height": 2.900659335515505,
+          "access_point": [
+            -1.2214191779262324,
+            -0.5578137603214788
+          ],
+          "l_cutout_width": 1.0109698375411185,
+          "l_cutout_height": 1.3846036590416548
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.8730481159370904,
+          "height": 4.450118965837582,
+          "access_point": [
+            0.14428954837670904,
+            -0.9170079699007163
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 141.3352171774156,
+        "occupancy": 0.15703913019712842,
+        "free_space_ratio": 0.8429608698028715,
+        "mean_machine_area": 17.66690214717695,
+        "machine_area_cv": 0.33098278756686556,
+        "mean_aspect_ratio": 1.3799820094551118,
+        "max_aspect_ratio": 2.100273054560968,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.087806596226486,
+        "max_diagonal_over_extent": 0.25527095221111773,
+        "random_feasibility_rate": 0.034
+      }
+    },
+    {
+      "name": "test_2",
+      "split": "test",
+      "index": 1,
+      "seed": 1001,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.3899529038799106,
+          "height": 2.6465655818700866,
+          "access_point": [
+            0.7807193219222723,
+            1.0881112205536065
+          ],
+          "l_cutout_width": 1.1547073393987153,
+          "l_cutout_height": 1.2917602737010245
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.357688169782384,
+          "height": 3.516699163652585,
+          "access_point": [
+            -0.3765820660244392,
+            0.447078684874064
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 4.202773998257099,
+          "height": 3.9302773065693937,
+          "access_point": [
+            0.3233791860765254,
+            -1.3478283130234778
+          ],
+          "l_cutout_width": 1.811819150697944,
+          "l_cutout_height": 1.683787594289996
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.766517359609248,
+          "height": 4.287347583147261,
+          "access_point": [
+            0.46731749056644434,
+            0.7113214940685761
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.5626266652895233,
+          "height": 3.7549445914771136,
+          "access_point": [
+            1.1850895645812347,
+            1.2790749404276882
+          ],
+          "l_cutout_width": 1.0148383679392292,
+          "l_cutout_height": 1.7701850441231248
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.908877415275697,
+          "height": 3.516586640606975,
+          "access_point": [
+            -1.111264248945024,
+            1.088063587588262
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.761389384446108,
+          "height": 3.9821474983008054,
+          "access_point": [
+            -1.27415360786677,
+            0.16945623886683014
+          ],
+          "l_cutout_width": 1.3452444106587405,
+          "l_cutout_height": 1.3038750994349293
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.498431847984361,
+          "height": 2.5887051625007858,
+          "access_point": [
+            1.1202243289680065,
+            0.32338019932712636
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 120.92934119547121,
+        "occupancy": 0.13436593466163468,
+        "free_space_ratio": 0.8656340653383653,
+        "mean_machine_area": 15.116167649433901,
+        "machine_area_cv": 0.30654972904622285,
+        "mean_aspect_ratio": 1.3543048889831824,
+        "max_aspect_ratio": 2.0365839187220605,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.2389023877091074,
+        "max_diagonal_over_extent": 0.23952283991625578,
+        "random_feasibility_rate": 0.0545
+      }
+    },
+    {
+      "name": "test_3",
+      "split": "test",
+      "index": 2,
+      "seed": 1002,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.562845221065727,
+          "height": 3.5531255025286828,
+          "access_point": [
+            -0.8371644807502603,
+            -1.1089887482498828
+          ],
+          "l_cutout_width": 1.6201544270128556,
+          "l_cutout_height": 1.4861973702101823
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.8633654957971215,
+          "height": 4.268193989914735,
+          "access_point": [
+            -0.19381229929355026,
+            -1.3557059785269767
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.6764541193028526,
+          "height": 4.471370112902497,
+          "access_point": [
+            -0.2367332869498051,
+            0.19560884437586745
+          ],
+          "l_cutout_width": 1.5669803548878685,
+          "l_cutout_height": 1.9352067113581768
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.4875330696677063,
+          "height": 3.6655733315862715,
+          "access_point": [
+            0.45797574032977195,
+            1.3044970627709107
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.8428151178351637,
+          "height": 4.751193036459156,
+          "access_point": [
+            1.046518783769514,
+            0.07345425944054718
+          ],
+          "l_cutout_width": 1.5331691842764428,
+          "l_cutout_height": 2.2869875365642023
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.320473997793099,
+          "height": 3.2234087344293814,
+          "access_point": [
+            0.892139309758373,
+            -1.196215858428412
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.15618120333149,
+          "height": 4.112390858474271,
+          "access_point": [
+            -0.32619715526928994,
+            1.3178925992997907
+          ],
+          "l_cutout_width": 1.9614330534481748,
+          "l_cutout_height": 1.1635469314663034
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.250409343879831,
+          "height": 4.885635981252729,
+          "access_point": [
+            -1.244642916468583,
+            0.9306246668547438
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 129.11868132842898,
+        "occupancy": 0.1434652014760322,
+        "free_space_ratio": 0.8565347985239677,
+        "mean_machine_area": 16.139835166053622,
+        "machine_area_cv": 0.19773516179128175,
+        "mean_aspect_ratio": 1.2088604002116232,
+        "max_aspect_ratio": 1.3403432061363834,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.2377174207193593,
+        "max_diagonal_over_extent": 0.2198432855327523,
+        "random_feasibility_rate": 0.0505
+      }
+    },
+    {
+      "name": "test_4",
+      "split": "test",
+      "index": 3,
+      "seed": 1003,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.49202426281941,
+          "height": 3.399976142150642,
+          "access_point": [
+            0.6661852701711526,
+            -0.15983619825714346
+          ],
+          "l_cutout_width": 1.5648916257806644,
+          "l_cutout_height": 1.0181476658092599
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.004702681289283,
+          "height": 3.688860060684419,
+          "access_point": [
+            -0.1460293046552752,
+            -1.2363307648169108
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.8852901504920467,
+          "height": 3.3465808552012763,
+          "access_point": [
+            1.2062877082657257,
+            0.6520421207779896
+          ],
+          "l_cutout_width": 1.8470758684809927,
+          "l_cutout_height": 1.0222166759681675
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.6854046437756027,
+          "height": 3.8453676653393334,
+          "access_point": [
+            -1.3161746862607568,
+            -0.811933017866121
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.679448691438802,
+          "height": 2.5021179419029105,
+          "access_point": [
+            -0.3238941652442884,
+            -1.405994283987204
+          ],
+          "l_cutout_width": 1.322295747773934,
+          "l_cutout_height": 1.2247928773993872
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.1599727435565725,
+          "height": 3.1696411111271257,
+          "access_point": [
+            1.234101827402375,
+            1.0685068210630657
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.7645903314094573,
+          "height": 3.567946384083301,
+          "access_point": [
+            -0.9084155962178977,
+            0.7934450862494509
+          ],
+          "l_cutout_width": 1.4007477709738931,
+          "l_cutout_height": 1.6037724444352257
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.263487078484016,
+          "height": 2.8323425698332603,
+          "access_point": [
+            -1.091747635997383,
+            0.7265979190415108
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 103.1063231207961,
+        "occupancy": 0.114562581245329,
+        "free_space_ratio": 0.885437418754671,
+        "mean_machine_area": 12.888290390099513,
+        "machine_area_cv": 0.13403935777940662,
+        "mean_aspect_ratio": 1.3384117692591122,
+        "max_aspect_ratio": 1.8701950907557892,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.3050631042483631,
+        "max_diagonal_over_extent": 0.1992387196256398,
+        "random_feasibility_rate": 0.0805
+      }
+    },
+    {
+      "name": "test_5",
+      "split": "test",
+      "index": 4,
+      "seed": 1004,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.2633747184203,
+          "height": 4.940268336213265,
+          "access_point": [
+            0.3398400740257048,
+            0.5791269839365079
+          ],
+          "l_cutout_width": 1.575873638448512,
+          "l_cutout_height": 1.276108201350008
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.490365622435004,
+          "height": 4.612310412804426,
+          "access_point": [
+            -0.8711153639508299,
+            0.4515509618989175
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.100994857453079,
+          "height": 4.287584886913267,
+          "access_point": [
+            0.9273217354170225,
+            1.035593650152581
+          ],
+          "l_cutout_width": 1.573040558299958,
+          "l_cutout_height": 1.578318605162063
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.1618422271214754,
+          "height": 2.8579753956672955,
+          "access_point": [
+            -1.4199086548146311,
+            -1.03975235463272
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.509029697911105,
+          "height": 3.3115842459971363,
+          "access_point": [
+            -0.5912474908450467,
+            -1.1464290076422654
+          ],
+          "l_cutout_width": 1.2122026659935063,
+          "l_cutout_height": 1.6348564905742526
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.1515462369869143,
+          "height": 4.959275094699635,
+          "access_point": [
+            0.15681177444208005,
+            -0.7576918401893217
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.0478021691629826,
+          "height": 4.70412693354252,
+          "access_point": [
+            -0.3308971684006825,
+            1.3451970095347079
+          ],
+          "l_cutout_width": 1.0306540904663863,
+          "l_cutout_height": 2.0782620028532337
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.9827205647822055,
+          "height": 4.522098515615737,
+          "access_point": [
+            -0.02679632301505608,
+            0.6551626859781452
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 145.1339633759198,
+        "occupancy": 0.16125995930657755,
+        "free_space_ratio": 0.8387400406934225,
+        "mean_machine_area": 18.141745421989974,
+        "machine_area_cv": 0.22213902547967512,
+        "mean_aspect_ratio": 1.403430732514578,
+        "max_aspect_ratio": 1.8061184973624522,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.113416393787808,
+        "max_diagonal_over_extent": 0.23902004102882773,
+        "random_feasibility_rate": 0.03
+      }
+    },
+    {
+      "name": "test_6",
+      "split": "test",
+      "index": 5,
+      "seed": 1005,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.449331189458029,
+          "height": 4.755457498117153,
+          "access_point": [
+            0.11237158053859231,
+            1.1284022914533574
+          ],
+          "l_cutout_width": 1.7019255881148432,
+          "l_cutout_height": 2.370184096809234
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.072339710957092,
+          "height": 4.1543249074159725,
+          "access_point": [
+            -0.03513832116340265,
+            0.21792384743313198
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.9716519497541802,
+          "height": 4.518088627740883,
+          "access_point": [
+            0.9261972167390833,
+            0.4825573564525021
+          ],
+          "l_cutout_width": 1.5720331395605738,
+          "l_cutout_height": 1.0555067298627723
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.317690798387449,
+          "height": 3.350453721185702,
+          "access_point": [
+            -1.2148192614689322,
+            -0.8035569395073655
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.8852537344888196,
+          "height": 2.8069250263071597,
+          "access_point": [
+            -0.07957872291188073,
+            1.1218087468703812
+          ],
+          "l_cutout_width": 1.5602021017519143,
+          "l_cutout_height": 1.1586671506892745
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.068786083456943,
+          "height": 4.610828047574916,
+          "access_point": [
+            0.6413304334871466,
+            0.12494988099833404
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.797324846500802,
+          "height": 4.825921630045986,
+          "access_point": [
+            0.49411089656376683,
+            1.0443785623458606
+          ],
+          "l_cutout_width": 1.2465051758346921,
+          "l_cutout_height": 1.8460606071110974
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.370827193059678,
+          "height": 3.3303401341319643,
+          "access_point": [
+            0.9379042599293097,
+            0.2894824615517517
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 126.58335481114061,
+        "occupancy": 0.14064817201237845,
+        "free_space_ratio": 0.8593518279876216,
+        "mean_machine_area": 15.822919351392576,
+        "machine_area_cv": 0.17676450944983105,
+        "mean_aspect_ratio": 1.2392952745931953,
+        "max_aspect_ratio": 1.5871554245809896,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 0.9713210810130037,
+        "max_diagonal_over_extent": 0.21707890027433355,
+        "random_feasibility_rate": 0.053
+      }
+    },
+    {
+      "name": "test_7",
+      "split": "test",
+      "index": 6,
+      "seed": 1006,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.039859869834281,
+          "height": 3.0716027402082684,
+          "access_point": [
+            -1.4628225891627653,
+            1.2924810777075342
+          ],
+          "l_cutout_width": 1.3289422706747618,
+          "l_cutout_height": 1.0003726272432927
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.6291512153822176,
+          "height": 3.794900568087754,
+          "access_point": [
+            0.7884666318651603,
+            -0.5730846307868337
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.4533936735844137,
+          "height": 2.6761443057253125,
+          "access_point": [
+            1.1175192079625078,
+            -0.5775055735771328
+          ],
+          "l_cutout_width": 1.1982863244780915,
+          "l_cutout_height": 1.3326111002303935
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.215523846219886,
+          "height": 4.422695595055866,
+          "access_point": [
+            0.7043329553848796,
+            -1.379669906308929
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 5.349828652038334,
+          "height": 4.972268900572432,
+          "access_point": [
+            1.4604091167003999,
+            -1.225311351712379
+          ],
+          "l_cutout_width": 2.033388897491227,
+          "l_cutout_height": 2.34150221013281
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 5.395622256027545,
+          "height": 3.4440704712490207,
+          "access_point": [
+            -0.4355005921953352,
+            -0.2896471893830981
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.5747032935107015,
+          "height": 3.5267519742712645,
+          "access_point": [
+            0.41902885360878006,
+            0.4345971014806378
+          ],
+          "l_cutout_width": 1.9252253602070417,
+          "l_cutout_height": 1.3516703720831273
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.841729736078269,
+          "height": 3.8702441676743833,
+          "access_point": [
+            0.06373124033565936,
+            1.4924312330376948
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 132.1262792344146,
+        "occupancy": 0.14680697692712733,
+        "free_space_ratio": 0.8531930230728727,
+        "mean_machine_area": 16.515784904301825,
+        "machine_area_cv": 0.32978948142078895,
+        "mean_aspect_ratio": 1.2849641788470691,
+        "max_aspect_ratio": 1.566641072263187,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.2825748127041237,
+        "max_diagonal_over_extent": 0.24345687417731499,
+        "random_feasibility_rate": 0.0425
+      }
+    },
+    {
+      "name": "test_8",
+      "split": "test",
+      "index": 7,
+      "seed": 1007,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.567818165545654,
+          "height": 4.501209852077196,
+          "access_point": [
+            0.2815300488629122,
+            1.1610279972395032
+          ],
+          "l_cutout_width": 2.3228723543444145,
+          "l_cutout_height": 2.0126986478561983
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.6741972309507984,
+          "height": 4.940454700158466,
+          "access_point": [
+            0.40171163222902107,
+            0.17408569276583297
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 4.339057950197045,
+          "height": 3.2084115730956584,
+          "access_point": [
+            1.2059641246918664,
+            -1.40194478554734
+          ],
+          "l_cutout_width": 1.510245050481653,
+          "l_cutout_height": 1.113902116062443
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.7750270748287456,
+          "height": 4.753087425062139,
+          "access_point": [
+            -1.1367431878588705,
+            1.2522046536663654
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.900811032757571,
+          "height": 4.729103842297375,
+          "access_point": [
+            1.3282611002724702,
+            0.44228092043053113
+          ],
+          "l_cutout_width": 1.427001914511498,
+          "l_cutout_height": 1.3109112978688164
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.080180801439616,
+          "height": 3.9271810152305693,
+          "access_point": [
+            -1.225698100558235,
+            1.4186424317511217
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.1474157182383458,
+          "height": 4.540763710504148,
+          "access_point": [
+            -1.1359156864197173,
+            -0.3195675622573808
+          ],
+          "l_cutout_width": 1.4367387580679511,
+          "l_cutout_height": 1.3391516196859587
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.096987412341997,
+          "height": 3.1766511865691376,
+          "access_point": [
+            1.1116775106103338,
+            1.1429542022776644
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 133.8352157675451,
+        "occupancy": 0.14870579529727232,
+        "free_space_ratio": 0.8512942047027277,
+        "mean_machine_area": 16.729401970943137,
+        "machine_area_cv": 0.3403759629132865,
+        "mean_aspect_ratio": 1.2410891274183,
+        "max_aspect_ratio": 1.4426958867212112,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.4027700242339805,
+        "max_diagonal_over_extent": 0.24931634921050472,
+        "random_feasibility_rate": 0.0395
+      }
+    },
+    {
+      "name": "test_9",
+      "split": "test",
+      "index": 8,
+      "seed": 1008,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.559471479705669,
+          "height": 4.895997186100127,
+          "access_point": [
+            -0.47911309270018054,
+            0.6245549343537906
+          ],
+          "l_cutout_width": 2.184035745403629,
+          "l_cutout_height": 1.0728729435251776
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.983982638525475,
+          "height": 4.567785284326925,
+          "access_point": [
+            1.1204883383426765,
+            0.27390570907168854
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.337941674704891,
+          "height": 3.3619446245811604,
+          "access_point": [
+            -1.4658672018519916,
+            0.8729228645933835
+          ],
+          "l_cutout_width": 1.219286233202401,
+          "l_cutout_height": 1.151331085726576
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.440297205816277,
+          "height": 2.6016220304699527,
+          "access_point": [
+            -1.0701588898635017,
+            -1.1895239579276229
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.6900447243899963,
+          "height": 3.3746277560937497,
+          "access_point": [
+            1.100252421853908,
+            -1.0572351787156555
+          ],
+          "l_cutout_width": 1.1892126773445075,
+          "l_cutout_height": 1.1709043330865188
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.690039282947386,
+          "height": 4.573265260150713,
+          "access_point": [
+            -0.18313417459517023,
+            -0.15091837272306496
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 4.023607286222866,
+          "height": 4.7511698329299925,
+          "access_point": [
+            -0.1811132275880034,
+            -0.12746584184658305
+          ],
+          "l_cutout_width": 1.570576507551087,
+          "l_cutout_height": 1.9253541058043764
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.97910155780408,
+          "height": 4.7755467587197336,
+          "access_point": [
+            0.23006881054553951,
+            -0.2533987069481538
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 129.32071462803395,
+        "occupancy": 0.14368968292003773,
+        "free_space_ratio": 0.8563103170799623,
+        "mean_machine_area": 16.165089328504244,
+        "machine_area_cv": 0.33527135898269206,
+        "mean_aspect_ratio": 1.1313437708052894,
+        "max_aspect_ratio": 1.3223662644011465,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 0.9467144596653235,
+        "max_diagonal_over_extent": 0.22996931961470563,
+        "random_feasibility_rate": 0.0605
+      }
+    },
+    {
+      "name": "test_10",
+      "split": "test",
+      "index": 9,
+      "seed": 1009,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 3.540577255455455,
+          "height": 3.718405682506888,
+          "access_point": [
+            -1.2672248988047472,
+            0.06770017322440469
+          ],
+          "l_cutout_width": 1.7083908017652731,
+          "l_cutout_height": 1.7528773154972157
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 4.508908773271992,
+          "height": 4.5400669940937775,
+          "access_point": [
+            0.9177336000983449,
+            -0.8578226728379865
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.264174633434594,
+          "height": 3.008243426610664,
+          "access_point": [
+            0.2512082772988391,
+            0.5212001389017176
+          ],
+          "l_cutout_width": 1.1016404639611883,
+          "l_cutout_height": 1.3763282041774088
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.712014526226607,
+          "height": 3.6594995486537263,
+          "access_point": [
+            0.032121508996256765,
+            -1.09689780626679
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.786751017430419,
+          "height": 4.9264925276605585,
+          "access_point": [
+            -1.0859218878991244,
+            0.5745138967117178
+          ],
+          "l_cutout_width": 1.636926493563233,
+          "l_cutout_height": 2.137078922889526
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.286672182732154,
+          "height": 4.468373044798195,
+          "access_point": [
+            -0.13925690669836222,
+            -0.6001776761301605
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.8035773534044663,
+          "height": 3.534524913374552,
+          "access_point": [
+            1.1867251472060585,
+            -0.48302104993915496
+          ],
+          "l_cutout_width": 1.4003238348522484,
+          "l_cutout_height": 1.2043332443840176
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 3.5736384245768695,
+          "height": 4.6055371340185784,
+          "access_point": [
+            -1.1119685595449722,
+            0.1372480617768228
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 123.64228836035545,
+        "occupancy": 0.13738032040039494,
+        "free_space_ratio": 0.8626196795996051,
+        "mean_machine_area": 15.455286045044431,
+        "machine_area_cv": 0.28683345121211307,
+        "mean_aspect_ratio": 1.1082849442988048,
+        "max_aspect_ratio": 1.288752970178814,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.0559403917631496,
+        "max_diagonal_over_extent": 0.22896703772466287,
+        "random_feasibility_rate": 0.0555
+      }
+    }
+  ],
+  "generalization": [
+    {
+      "name": "generalization_1",
+      "split": "generalization",
+      "index": 0,
+      "seed": 4000,
+      "n_machines": 6,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.230028643930279,
+          "height": 3.544855078638011,
+          "access_point": [
+            -0.1085012396608378,
+            1.3381836544115222
+          ],
+          "l_cutout_width": 1.5657402690312143,
+          "l_cutout_height": 1.5080691740463767
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.9469122377603942,
+          "height": 4.163236508422353,
+          "access_point": [
+            -0.4080176722929565,
+            -0.47945333194540707
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.9632286000858246,
+          "height": 2.7933659106830557,
+          "access_point": [
+            0.3330615354897677,
+            0.4924445788809395
+          ],
+          "l_cutout_width": 1.3419190536676484,
+          "l_cutout_height": 1.3535587836794263
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.6267318839144065,
+          "height": 3.464661321472944,
+          "access_point": [
+            1.271000302159317,
+            -0.16790349543537442
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.9824571208384807,
+          "height": 4.192119261156016,
+          "access_point": [
+            -0.4721845729908811,
+            -1.265645644724637
+          ],
+          "l_cutout_width": 1.2681514688426334,
+          "l_cutout_height": 1.6149786809143016
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.983491808930255,
+          "height": 2.8441934774386417,
+          "access_point": [
+            -0.8134078045543498,
+            -0.5148690688328117
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 6.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 79.70621455238292,
+        "occupancy": 0.0885624606137588,
+        "free_space_ratio": 0.9114375393862412,
+        "mean_machine_area": 13.28436909206382,
+        "machine_area_cv": 0.16758187001370928,
+        "mean_aspect_ratio": 1.253080610822609,
+        "max_aspect_ratio": 1.7521634334870122,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.0270345976016353,
+        "max_diagonal_over_extent": 0.19273997630392087,
+        "random_feasibility_rate": 0.265
+      }
+    },
+    {
+      "name": "generalization_2",
+      "split": "generalization",
+      "index": 1,
+      "seed": 4001,
+      "n_machines": 10,
+      "workspace_bounds": [
+        -15.0,
+        15.0,
+        -15.0,
+        15.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.246140420381721,
+          "height": 2.8434418221237894,
+          "access_point": [
+            -0.9190949836858103,
+            0.8103385828262724
+          ],
+          "l_cutout_width": 1.7831546045151079,
+          "l_cutout_height": 1.313758762219931
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.546406755408123,
+          "height": 3.674653134149879,
+          "access_point": [
+            0.47290763806460534,
+            0.8801012807986286
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.933777605965293,
+          "height": 4.419709543296506,
+          "access_point": [
+            0.013322296298547087,
+            -0.2846119998083856
+          ],
+          "l_cutout_width": 1.7137003178345585,
+          "l_cutout_height": 2.1575729010925366
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 3.342872940772474,
+          "height": 2.800380083240453,
+          "access_point": [
+            -0.030437929429860233,
+            -1.2643687962472412
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.929413146010646,
+          "height": 4.00059963821315,
+          "access_point": [
+            1.363087363935307,
+            1.2042632582366273
+          ],
+          "l_cutout_width": 1.2412892462318252,
+          "l_cutout_height": 1.0327612738903118
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.6433215263090495,
+          "height": 4.593740875113239,
+          "access_point": [
+            -1.490077808176802,
+            -0.4588949855855766
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.0479382005203393,
+          "height": 2.673829987299134,
+          "access_point": [
+            -1.433339073625564,
+            -0.8664186479522605
+          ],
+          "l_cutout_width": 1.4889229285573053,
+          "l_cutout_height": 1.2018805959490304
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.339896929830209,
+          "height": 3.0859214415634835,
+          "access_point": [
+            0.44510098372398854,
+            -0.9935173662491192
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 9,
+          "shape": "l_shape",
+          "width": 3.280715966064281,
+          "height": 3.619445506740144,
+          "access_point": [
+            0.411302688591648,
+            1.0675541936672088
+          ],
+          "l_cutout_width": 1.475680677006458,
+          "l_cutout_height": 1.6536804333712682
+        },
+        {
+          "id": 10,
+          "shape": "rectangle",
+          "width": 5.353954912570973,
+          "height": 4.213730834400739,
+          "access_point": [
+            0.8324598715780906,
+            -0.39126462958556285
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 10.0,
+        "workspace_half_extent": 15.0,
+        "workspace_area": 900.0,
+        "total_machine_area": 152.00957890414242,
+        "occupancy": 0.1688995321157138,
+        "free_space_ratio": 0.8311004678842862,
+        "mean_machine_area": 15.20095789041424,
+        "machine_area_cv": 0.3747974401815824,
+        "mean_aspect_ratio": 1.327617330461487,
+        "max_aspect_ratio": 1.7304059843871942,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1979471191895585,
+        "max_diagonal_over_extent": 0.24662961236135592,
+        "random_feasibility_rate": 0.011
+      }
+    },
+    {
+      "name": "generalization_3",
+      "split": "generalization",
+      "index": 2,
+      "seed": 4002,
+      "n_machines": 12,
+      "workspace_bounds": [
+        -18.0,
+        18.0,
+        -18.0,
+        18.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.730700082546574,
+          "height": 4.233297583128899,
+          "access_point": [
+            1.143226403009908,
+            0.9236020241785754
+          ],
+          "l_cutout_width": 1.0476629079343776,
+          "l_cutout_height": 1.8424113593316858
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.236601651727364,
+          "height": 2.6594436862762363,
+          "access_point": [
+            -0.6478653339974294,
+            -0.05393735113564757
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 3.1298534041463615,
+          "height": 4.987222264263291,
+          "access_point": [
+            -0.6248740743953074,
+            -0.6153976153694135
+          ],
+          "l_cutout_width": 1.0183463147787988,
+          "l_cutout_height": 1.7081482108445976
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.409747885000536,
+          "height": 3.8834922134419023,
+          "access_point": [
+            -1.1773558426300577,
+            -1.4388028118083298
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 3.2592636073011807,
+          "height": 3.1217489508648217,
+          "access_point": [
+            1.0004634707309012,
+            1.2286981897024218
+          ],
+          "l_cutout_width": 1.3904696024979653,
+          "l_cutout_height": 1.0083491234623938
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.2023598717790325,
+          "height": 4.868376798630102,
+          "access_point": [
+            -0.8650342445769378,
+            1.0460881574091019
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.198602591971348,
+          "height": 3.6781491784117955,
+          "access_point": [
+            -0.7322279418596254,
+            0.8845549378056861
+          ],
+          "l_cutout_width": 1.439294446392115,
+          "l_cutout_height": 1.4322861143249321
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.291537919368087,
+          "height": 2.5756313453469177,
+          "access_point": [
+            0.11870593362975423,
+            0.45673949726136454
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 9,
+          "shape": "l_shape",
+          "width": 5.136856192380413,
+          "height": 4.902303621200598,
+          "access_point": [
+            0.9453044243040898,
+            -0.40495140800973783
+          ],
+          "l_cutout_width": 2.350764712380165,
+          "l_cutout_height": 2.3207499097388147
+        },
+        {
+          "id": 10,
+          "shape": "rectangle",
+          "width": 3.9143427725931796,
+          "height": 4.520380417993511,
+          "access_point": [
+            0.326121545958721,
+            -1.4231456521886816
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 11,
+          "shape": "l_shape",
+          "width": 3.8740959405832815,
+          "height": 4.471471420074807,
+          "access_point": [
+            0.4731162278011456,
+            -0.7380335432578303
+          ],
+          "l_cutout_width": 1.773022008325992,
+          "l_cutout_height": 1.5728892736204307
+        },
+        {
+          "id": 12,
+          "shape": "rectangle",
+          "width": 3.043766302057149,
+          "height": 4.841356727181574,
+          "access_point": [
+            -0.04057117545317723,
+            1.139630314596264
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 12.0,
+        "workspace_half_extent": 18.0,
+        "workspace_area": 1296.0,
+        "total_machine_area": 195.17016170754292,
+        "occupancy": 0.1505942605768078,
+        "free_space_ratio": 0.8494057394231922,
+        "mean_machine_area": 16.264180142295242,
+        "machine_area_cv": 0.24553220267999745,
+        "mean_aspect_ratio": 1.3782329112538116,
+        "max_aspect_ratio": 1.9690590474805933,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1602929601064058,
+        "max_diagonal_over_extent": 0.1979090775609781,
+        "random_feasibility_rate": 0.0075
+      }
+    },
+    {
+      "name": "generalization_4",
+      "split": "generalization",
+      "index": 3,
+      "seed": 4003,
+      "n_machines": 8,
+      "workspace_bounds": [
+        -11.0,
+        11.0,
+        -11.0,
+        11.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.926276617096943,
+          "height": 3.103544466481018,
+          "access_point": [
+            -0.8057112662812118,
+            -1.3147172292405678
+          ],
+          "l_cutout_width": 1.1967222480302917,
+          "l_cutout_height": 1.3558296088902835
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 5.067622650545525,
+          "height": 3.9278718022133052,
+          "access_point": [
+            -0.6693428146448573,
+            -1.2344201422954775
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.248099537391807,
+          "height": 4.5356688869604636,
+          "access_point": [
+            -0.4291035517097592,
+            1.1676018131440347
+          ],
+          "l_cutout_width": 1.469845937704148,
+          "l_cutout_height": 1.09938216991711
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 5.354661959849622,
+          "height": 3.875707433706307,
+          "access_point": [
+            -0.7667693020478319,
+            -0.6376965608804939
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.029363219783183,
+          "height": 2.599711131035476,
+          "access_point": [
+            -0.730119448107494,
+            0.728644588335496
+          ],
+          "l_cutout_width": 1.5590894232888313,
+          "l_cutout_height": 1.1278600454048542
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.996820878665997,
+          "height": 4.297526393772133,
+          "access_point": [
+            1.3305363371393315,
+            -0.6417456550288114
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 5.9387011377469605,
+          "height": 4.7722593669656845,
+          "access_point": [
+            0.3560708119954914,
+            0.7105280336805571
+          ],
+          "l_cutout_width": 2.2206596656940665,
+          "l_cutout_height": 1.881166004122306
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.767423934255402,
+          "height": 4.089388590223082,
+          "access_point": [
+            -0.04945406649660189,
+            0.9599338230864269
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 8.0,
+        "workspace_half_extent": 11.0,
+        "workspace_area": 484.0,
+        "total_machine_area": 153.46586325204842,
+        "occupancy": 0.31707822985960415,
+        "free_space_ratio": 0.6829217701403958,
+        "mean_machine_area": 19.183232906506053,
+        "machine_area_cv": 0.2313230861331538,
+        "mean_aspect_ratio": 1.3576537782561648,
+        "max_aspect_ratio": 1.909518835996091,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.1815129501221873,
+        "max_diagonal_over_extent": 0.34629870146821484,
+        "random_feasibility_rate": 0.0
+      }
+    },
+    {
+      "name": "generalization_5",
+      "split": "generalization",
+      "index": 4,
+      "seed": 4004,
+      "n_machines": 10,
+      "workspace_bounds": [
+        -20.0,
+        20.0,
+        -20.0,
+        20.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 4.426914491298925,
+          "height": 3.3873900491716435,
+          "access_point": [
+            0.03125995906104162,
+            0.850582101647706
+          ],
+          "l_cutout_width": 1.4850669331998818,
+          "l_cutout_height": 1.3108272403988066
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.004520469422302,
+          "height": 4.1569317057947455,
+          "access_point": [
+            0.7414127338948213,
+            -0.7530554069832135
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.08790716257918,
+          "height": 4.032396661785205,
+          "access_point": [
+            1.0340280361012368,
+            -1.4455601924351535
+          ],
+          "l_cutout_width": 1.116849284149477,
+          "l_cutout_height": 1.6588028666448458
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.64976943065632,
+          "height": 3.0032741011524315,
+          "access_point": [
+            -1.1420733737670106,
+            1.0348565547175426
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.7096413945590765,
+          "height": 3.21771687810032,
+          "access_point": [
+            0.20542885240424047,
+            -1.0404226390307971
+          ],
+          "l_cutout_width": 2.3348817556542416,
+          "l_cutout_height": 1.0780799888791917
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 3.1554183486667586,
+          "height": 3.666155108120587,
+          "access_point": [
+            0.641015615156463,
+            -0.3730010046039616
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.8055922401160815,
+          "height": 4.051290862758114,
+          "access_point": [
+            -1.4984683261407041,
+            0.565580850542819
+          ],
+          "l_cutout_width": 1.836231693863167,
+          "l_cutout_height": 1.1434659584449014
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 4.682001408960765,
+          "height": 2.925344678458106,
+          "access_point": [
+            -0.7596537766813956,
+            1.306954664122185
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 9,
+          "shape": "l_shape",
+          "width": 3.7251079596756513,
+          "height": 2.958326085501345,
+          "access_point": [
+            0.9712315827162303,
+            0.527052116996432
+          ],
+          "l_cutout_width": 1.3151028736536827,
+          "l_cutout_height": 1.3358919778922598
+        },
+        {
+          "id": 10,
+          "shape": "rectangle",
+          "width": 5.8940263920254825,
+          "height": 4.174510293170169,
+          "access_point": [
+            0.9965199293444726,
+            0.6390368259964907
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 10.0,
+        "workspace_half_extent": 20.0,
+        "workspace_area": 1600.0,
+        "total_machine_area": 143.254604936181,
+        "occupancy": 0.08953412808511313,
+        "free_space_ratio": 0.9104658719148868,
+        "mean_machine_area": 14.3254604936181,
+        "machine_area_cv": 0.28535389585849696,
+        "mean_aspect_ratio": 1.3462111541192168,
+        "max_aspect_ratio": 1.6004956419113525,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.243077203417205,
+        "max_diagonal_over_extent": 0.18056522937998856,
+        "random_feasibility_rate": 0.104
+      }
+    },
+    {
+      "name": "generalization_6",
+      "split": "generalization",
+      "index": 5,
+      "seed": 4005,
+      "n_machines": 12,
+      "workspace_bounds": [
+        -14.0,
+        14.0,
+        -14.0,
+        14.0
+      ],
+      "robot_position": [
+        0,
+        0
+      ],
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "machines": [
+        {
+          "id": 1,
+          "shape": "l_shape",
+          "width": 5.775628872723078,
+          "height": 4.371282444010623,
+          "access_point": [
+            0.6013893392966319,
+            0.2597661694161548
+          ],
+          "l_cutout_width": 1.2161961622905948,
+          "l_cutout_height": 1.9799436442608558
+        },
+        {
+          "id": 2,
+          "shape": "rectangle",
+          "width": 3.906332105586855,
+          "height": 3.927840191589076,
+          "access_point": [
+            -1.2810977210817693,
+            0.6879173075014426
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 3,
+          "shape": "l_shape",
+          "width": 5.357427257575814,
+          "height": 3.2108461679765155,
+          "access_point": [
+            0.5976318409470944,
+            0.7861615266654511
+          ],
+          "l_cutout_width": 1.863601164294728,
+          "l_cutout_height": 1.0052541448606698
+        },
+        {
+          "id": 4,
+          "shape": "rectangle",
+          "width": 4.1709612729867755,
+          "height": 4.321526601068948,
+          "access_point": [
+            0.8441976531040969,
+            1.4769054629993312
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 5,
+          "shape": "l_shape",
+          "width": 4.011432332695455,
+          "height": 4.101859938641441,
+          "access_point": [
+            0.6071405468320079,
+            -1.1439071148566304
+          ],
+          "l_cutout_width": 1.585487519025178,
+          "l_cutout_height": 1.017682448815433
+        },
+        {
+          "id": 6,
+          "shape": "rectangle",
+          "width": 4.460481826560704,
+          "height": 2.5238578962344573,
+          "access_point": [
+            -0.9238689270005284,
+            0.868664003843918
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 7,
+          "shape": "l_shape",
+          "width": 3.737373819981247,
+          "height": 4.774933528071125,
+          "access_point": [
+            -0.6632542708020592,
+            0.3853005591208345
+          ],
+          "l_cutout_width": 1.513900781435435,
+          "l_cutout_height": 1.4380473706821757
+        },
+        {
+          "id": 8,
+          "shape": "rectangle",
+          "width": 5.416375351217539,
+          "height": 4.145988002770144,
+          "access_point": [
+            0.29276349613812513,
+            0.04512253807890598
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 9,
+          "shape": "l_shape",
+          "width": 4.753455088856932,
+          "height": 2.52939605330739,
+          "access_point": [
+            -0.10141509769520995,
+            -0.6600874056795757
+          ],
+          "l_cutout_width": 1.0102130664331228,
+          "l_cutout_height": 1.2125020289636892
+        },
+        {
+          "id": 10,
+          "shape": "rectangle",
+          "width": 3.1307802793617183,
+          "height": 4.260452174124243,
+          "access_point": [
+            -1.2644229954439092,
+            -0.7389469089330385
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        },
+        {
+          "id": 11,
+          "shape": "l_shape",
+          "width": 3.6917589677508893,
+          "height": 4.868813053401,
+          "access_point": [
+            -1.1328383056912088,
+            1.043796405723549
+          ],
+          "l_cutout_width": 1.0219871564388443,
+          "l_cutout_height": 2.1096112165142378
+        },
+        {
+          "id": 12,
+          "shape": "rectangle",
+          "width": 5.713772158160238,
+          "height": 2.7144010094156092,
+          "access_point": [
+            -0.3163520000445703,
+            -0.061676652345506344
+          ],
+          "l_cutout_width": 0,
+          "l_cutout_height": 0
+        }
+      ],
+      "features": {
+        "n_machines": 12.0,
+        "workspace_half_extent": 14.0,
+        "workspace_area": 784.0,
+        "total_machine_area": 191.22404873796037,
+        "occupancy": 0.2439082254310719,
+        "free_space_ratio": 0.7560917745689281,
+        "mean_machine_area": 15.93533739483003,
+        "machine_area_cv": 0.2231520983331621,
+        "mean_aspect_ratio": 1.422436784448621,
+        "max_aspect_ratio": 2.104984539255816,
+        "l_shape_fraction": 0.5,
+        "mean_access_offset": 1.0349476555457864,
+        "max_diagonal_over_extent": 0.25869077524108114,
+        "random_feasibility_rate": 0.0
+      }
+    }
+  ]
+}

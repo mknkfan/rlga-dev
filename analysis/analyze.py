@@ -8,7 +8,7 @@ Cliff's delta); budget-matched comparisons (best fitness at a common
 evaluation or wall-clock budget, and effort to reach a common quality
 target); and per-instance outcomes joined with instance features.
 
-Outputs (written under ``results/analysis``):
+Outputs (written under ``results/results_rl_ga/analysis``):
 
 ===========================  ====================================================
 ``summary_overall.csv``      one row per variant, pooled over instances
