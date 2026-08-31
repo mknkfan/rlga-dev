@@ -33,7 +33,7 @@ from analysis.analyze import label_of, variants_in  # noqa: E402
 from visualization.plots import variant_style  # noqa: E402
 from optimization.run_experiments import read_rows  # noqa: E402
 from analysis.stats_utils import describe  # noqa: E402
-from paths import DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR  # noqa: E402
+from run.paths import DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR  # noqa: E402
 from quality_vs_evaluations import MARKERS, place_labels, target_of  # noqa: E402
 
 RESULTS = DEFAULT_RESULTS_DIR

@@ -359,7 +359,7 @@ def dump_instance_catalogue(
 
 
 if __name__ == "__main__":
-    from paths import DEFAULT_RESULTS_DIR
+    from run.paths import DEFAULT_RESULTS_DIR
 
     out = os.path.join(DEFAULT_RESULTS_DIR, "instances.json")
     catalogue = dump_instance_catalogue(out)

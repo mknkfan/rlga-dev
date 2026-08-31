@@ -23,7 +23,7 @@ import os
 import time
 from typing import List, Sequence
 
-from paths import DEFAULT_RESULTS_DIR
+from run.paths import DEFAULT_RESULTS_DIR
 
 STAGES: Sequence[str] = (
     "instances",

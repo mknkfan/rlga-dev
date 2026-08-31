@@ -73,7 +73,7 @@ from typing import Dict, Optional, Sequence, Union
 from optimization.ga_core import DEFAULT_LS_SCHEDULE, GAConfig
 from optimization.metaheuristics import ALGORITHM_NAMES, ALGORITHMS, MetaConfig
 from optimization.run_experiments import read_rows
-from paths import DEFAULT_BASELINE_RESULTS_DIR
+from run.paths import DEFAULT_BASELINE_RESULTS_DIR
 from run.run_static_ga import (
     CATALOGUE,
     GROUPS,

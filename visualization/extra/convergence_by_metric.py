@@ -38,7 +38,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))
 from analysis.analyze import instances_in, label_of, load_trace, variants_in  # noqa: E402
 from visualization.plots import _aligned_curves  # noqa: E402
 from optimization.run_experiments import read_rows  # noqa: E402
-from paths import DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR  # noqa: E402
+from run.paths import DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR  # noqa: E402
 
 RESULTS = DEFAULT_RESULTS_DIR
 

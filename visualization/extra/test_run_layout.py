@@ -32,7 +32,7 @@ from core.problems import build_instances
 from optimization.rl_control import QLearningAgent, StateBins
 from optimization.variants import resolve
 from train.train_agents import agent_path
-from paths import DEFAULT_AGENT_DIR, DEFAULT_BINS_PATH, DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR
+from run.paths import DEFAULT_AGENT_DIR, DEFAULT_BINS_PATH, DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR
 
 RESULTS = DEFAULT_RESULTS_DIR
 AGENT_DIR = DEFAULT_AGENT_DIR

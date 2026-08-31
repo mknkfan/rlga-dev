@@ -31,7 +31,7 @@ from core.problems import build_instances
 from optimization.ga_core import ConfigurableGA, make_initial_population
 from optimization.rl_control import QLearningAgent, StateBins, policy_agreement
 from optimization.variants import DEFAULT_CONTROL_INTERVAL, resolve
-from paths import DEFAULT_AGENT_DIR
+from run.paths import DEFAULT_AGENT_DIR
 from train.calibrate_state_bins import DEFAULT_OUTPUT as DEFAULT_BINS_PATH
 
 AGENT_DIR = DEFAULT_AGENT_DIR
