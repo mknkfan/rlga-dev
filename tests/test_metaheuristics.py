@@ -201,7 +201,7 @@ def main() -> int:
         )
 
     print("\n6. A baseline run goes through the same grid as a GA run:")
-    from run_static_ga import StaticJob, execute
+    from run.run_static_ga import StaticJob, execute
 
     job = StaticJob(
         variant_key="pso",

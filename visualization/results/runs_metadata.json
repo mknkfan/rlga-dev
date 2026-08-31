@@ -1,0 +1,594 @@
+{
+  "split": "test",
+  "runs_per_instance": 10,
+  "generations": 300,
+  "population_size": 200,
+  "control_interval": 1,
+  "agent_seeds": [
+    0,
+    1,
+    2
+  ],
+  "agent_dir": "results\\agents",
+  "agent_dirs": null,
+  "state_bins": {
+    "diversity_edges": [
+      166.38507930032674,
+      192.97649994109315
+    ],
+    "improvement_edge": 0.002013379464830513,
+    "source": "tertiles of population diversity and median positive relative improvement observed on the 'train' split (15 instances x 2 seeds x 2 LS targets, 300 generations, pop 200); 18000 diversity samples, 6428 positive-improvement samples. No test-split data was used.",
+    "n_diversity_bins": 3,
+    "n_improvement_bins": 3
+  },
+  "variants": {
+    "ga_ls00": {
+      "label": "GA no LS",
+      "ls_target": "none",
+      "ls_controller": "static",
+      "ls_rate": 0.0,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_ls10_offspring": {
+      "label": "GA 10% LS [LS on offspring]",
+      "ls_target": "offspring",
+      "ls_controller": "static",
+      "ls_rate": 0.1,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_ls50_offspring": {
+      "label": "GA 50% LS [LS on offspring]",
+      "ls_target": "offspring",
+      "ls_controller": "static",
+      "ls_rate": 0.5,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_ls100_offspring": {
+      "label": "GA 100% LS [LS on offspring]",
+      "ls_target": "offspring",
+      "ls_controller": "static",
+      "ls_rate": 1.0,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_sched_offspring": {
+      "label": "GA scheduled LS [LS on offspring]",
+      "ls_target": "offspring",
+      "ls_controller": "schedule",
+      "ls_rate": 0.1,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "rlga_offspring": {
+      "label": "RL-GA [LS on offspring]",
+      "ls_target": "offspring",
+      "ls_controller": "rl",
+      "ls_rate": 0.1,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_ls10_elites": {
+      "label": "GA 10% LS [LS on elites]",
+      "ls_target": "elites",
+      "ls_controller": "static",
+      "ls_rate": 0.1,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_ls50_elites": {
+      "label": "GA 50% LS [LS on elites]",
+      "ls_target": "elites",
+      "ls_controller": "static",
+      "ls_rate": 0.5,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_ls100_elites": {
+      "label": "GA 100% LS [LS on elites]",
+      "ls_target": "elites",
+      "ls_controller": "static",
+      "ls_rate": 1.0,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "ga_sched_elites": {
+      "label": "GA scheduled LS [LS on elites]",
+      "ls_target": "elites",
+      "ls_controller": "schedule",
+      "ls_rate": 0.1,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    },
+    "rlga_elites": {
+      "label": "RL-GA [LS on elites]",
+      "ls_target": "elites",
+      "ls_controller": "rl",
+      "ls_rate": 0.1,
+      "ls_schedule": [
+        [
+          0,
+          0.1
+        ],
+        [
+          100,
+          0.5
+        ],
+        [
+          200,
+          1.0
+        ]
+      ],
+      "population_size": 200,
+      "generations": 300,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_rate": 0.1,
+      "tournament_k": 3,
+      "ls_iterations": 5,
+      "control_interval": 1,
+      "agent_key": null,
+      "enable_mutation_strategy_action": false,
+      "allowed_actions": null,
+      "rl_cost_penalty": 0.0,
+      "rl_stall_penalty": -0.1,
+      "rl_learn_online": true,
+      "mutation_rate_bounds": [
+        0.01,
+        0.8,
+        0.02
+      ],
+      "crossover_rate_bounds": [
+        0.2,
+        1.0,
+        0.05
+      ],
+      "ls_rate_step": 0.1,
+      "max_evaluations": null,
+      "max_seconds": null,
+      "snapshot_interval": 0,
+      "record_diversity": true,
+      "verbose": 0
+    }
+  },
+  "seed_rule": "run_seed = 42 + 100 * instance_index + run; shared by all variants",
+  "split_sizes": {
+    "train": 15,
+    "val": 5,
+    "test": 10
+  },
+  "environment": {
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "machine": "AMD64",
+    "cpu_count": 24,
+    "numpy": "2.5.2",
+    "parallel_workers": 22,
+    "timing_note": "Wall-clock time was measured with time.perf_counter and CPU time with time.process_time. When parallel_workers > 1 several runs share the machine, which inflates and adds noise to wall-clock time; CPU time is the more reliable effort measure in that case, and the evaluation count is hardware-independent.",
+    "timestamp": "2026-08-21 12:12:34"
+  },
+  "n_runs": 1100
+}

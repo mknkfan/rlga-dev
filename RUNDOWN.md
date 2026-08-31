@@ -57,7 +57,7 @@ collision/reachability constraints, not sheer space pressure.
 
 `dump_instance_catalogue()` (the `instances` pipeline stage) writes every
 instance's full geometry plus these descriptive features to
-`results/instances.json`.
+`results/results_rl_ga/instances.json`.
 
 ---
 
@@ -136,7 +136,7 @@ where:
 
 These tertile edges are calibrated once, on the **training split only**
 (`train/calibrate_state_bins.py`), and saved to
-`results/agents/state_bins.json` — evaluation runs load and reuse these
+`results/results_rl_ga/agents/state_bins.json` — evaluation runs load and reuse these
 fixed edges rather than recomputing them, so test-split data never leaks
 into the state discretisation.
 
@@ -198,7 +198,7 @@ independently trained agent, repeated for **3 seeds** each (agent seeds 0/1/2)
 — 6 trained Q-tables total by default. Training runs GA episodes over the
 **train split** (15 instances), learning rate 0.05, epsilon decaying
 0.30 → 0.05 per episode. Each trained agent (Q-table + training history) is
-saved as one `.npz` file under `results/agents/`.
+saved as one `.npz` file under `results/results_rl_ga/agents/`.
 
 **State-bin calibration** (`train/calibrate_state_bins.py`, the `calibrate`
 stage) runs *before* training: it samples population-diversity and
@@ -210,13 +210,13 @@ stage): all 11 variants are evaluated on the **test split** (10 instances) ×
 **10 seeds** = 1,100 runs, 300 generations each, population 200. RL variants
 rotate through the 3 independently trained agents (`agent_seed = run % 3`)
 so the reported numbers aren't those of one lucky training repetition. Every
-run's summary row goes to `results/runs.csv`; the full per-generation trace
-goes to `results/raw/<variant>/<instance>_run<k>.npz`.
+run's summary row goes to `results/results_rl_ga/runs.csv`; the full per-generation trace
+goes to `results/results_rl_ga/raw/<variant>/<instance>_run<k>.npz`.
 
 **Timing** (the `timing` stage) re-runs the same 11-variant grid but
 sequentially (`workers=1`, fewer seeds by default) so wall-clock numbers
 aren't distorted by CPU contention between parallel runs — written to
-`results/runs_timing.csv`.
+`results/results_rl_ga/runs_timing.csv`.
 
 ---
 
@@ -253,15 +253,15 @@ for reading rather than for scripts.
 
 ```bash
 pip install -r requirements.txt
-./run_pipeline.sh --replicate      # reuse the shipped agents, main grid only (~40 min)
-./run_pipeline.sh                  # rebuild everything from scratch, retraining agents
-./run_pipeline.sh --study myrun    # same, but writes to results/myrun/ instead of
+./run/run_pipeline.sh --replicate      # reuse the shipped agents, main grid only (~40 min)
+./run/run_pipeline.sh                  # rebuild everything from scratch, retraining agents
+./run/run_pipeline.sh --study myrun    # same, but writes to results/myrun/ instead of
                                     # overwriting the archived results/
 ```
 
-`run_pipeline.sh` is a thin wrapper around `run_all.py` that also picks a
+`run/run_pipeline.sh` is a thin wrapper around `run/run_all.py` that also picks a
 working Python interpreter and logs to `logs/<study>_<timestamp>.log`. Run
-`./run_pipeline.sh --help` for every flag (control interval, split sizes,
+`./run/run_pipeline.sh --help` for every flag (control interval, split sizes,
 seeds, generations, population size, RL stall penalty, worker count, etc).
 
 ### The underlying stages — `run_all.py`
@@ -281,18 +281,18 @@ seeds, generations, population size, RL stall penalty, worker count, etc).
 
 Run everything:
 ```bash
-python -m run_all
+python -m run.run_all
 ```
 
 Run just one stage (e.g. re-generate figures after tweaking a plot):
 ```bash
-python -m run_all --only figures
+python -m run.run_all --only figures
 ```
 
 Run a subset of stages, e.g. skip retraining and go straight to evaluation +
 analysis using the already-trained agents:
 ```bash
-python -m run_all --only main timing analyze figures
+python -m run.run_all --only main timing analyze figures
 ```
 
 Useful flags: `--runs N` (seeds per instance in the main grid), `--generations`,
@@ -305,7 +305,7 @@ otherwise skipped).
 ### Standalone figure scripts — `visualization/extra/`
 
 Each of these is independently runnable and writes into
-`results/figures/extra/` by default:
+`results/results_rl_ga/figures/extra/` by default:
 
 ```bash
 python visualization/extra/quality_vs_evaluations.py

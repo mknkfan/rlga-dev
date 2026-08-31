@@ -11,13 +11,13 @@ registry inside the worker processes and can only vary generations, population
 size and control interval; this script hands the worker the configuration
 itself, so anything in `GAConfig` can come from a flag.
 
-Run every command from the repository root, so `python -m run_static_ga`
+Run every command from the repository root, so `python -m run.run_static_ga`
 resolves.
 
 ```bash
-python -m run_static_ga --list-variants     # what can be run
-python -m run_static_ga --help              # every flag
-python -m run_static_ga                     # all 9 variants, all 5 stages
+python -m run.run_static_ga --list-variants     # what can be run
+python -m run.run_static_ga --help              # every flag
+python -m run.run_static_ga                     # all 9 variants, all 5 stages
 ```
 
 ---
@@ -48,7 +48,7 @@ pip install -r requirements.txt      # numpy, and matplotlib for the figures
 A fast smoke test (seconds, not minutes) before committing to a real run:
 
 ```bash
-python -m run_static_ga \
+python -m run.run_static_ga \
   --variants no-ls ls100-elites \
   --instances 0 1 --runs 2 \
   --generations 20 --population-size 30 \
@@ -58,10 +58,10 @@ python -m run_static_ga \
 The real thing — every static variant, the default budget, all five stages:
 
 ```bash
-python -m run_static_ga
+python -m run.run_static_ga
 ```
 
-Results land in **`results/static_ga/`** (see
+Results land in **`results/results_rl_ga/static_ga/`** (see
 [What gets written](#what-gets-written)).
 
 ---
@@ -80,9 +80,9 @@ runs everything else.
 | `figures` | every plot → `figures/` | `runs.csv`, `raw/`, matplotlib |
 
 ```bash
-python -m run_static_ga --only main                 # just produce runs.csv
-python -m run_static_ga --only analyze figures      # re-derive from an existing runs.csv
-python -m run_static_ga --skip timing               # everything but the slow sequential pass
+python -m run.run_static_ga --only main                 # just produce runs.csv
+python -m run.run_static_ga --only analyze figures      # re-derive from an existing runs.csv
+python -m run.run_static_ga --skip timing               # everything but the slow sequential pass
 ```
 
 `--only analyze figures` reads the variants back out of `runs.csv`, so it
@@ -152,7 +152,7 @@ learning and no randomness in the rate itself. The default schedule is
 next 100, 100 % thereafter. Override it with `--ls-schedule`:
 
 ```bash
-python -m run_static_ga --variants deterministic \
+python -m run.run_static_ga --variants deterministic \
   --ls-schedule 0:0.2 50:0.6 150:1.0
 ```
 
@@ -164,7 +164,7 @@ you. The flag has no effect on the fixed-rate variants.
 For an LS rate the catalogue doesn't cover:
 
 ```bash
-python -m run_static_ga --variants custom --ls-rate 0.25 --ls-target elites
+python -m run.run_static_ga --variants custom --ls-rate 0.25 --ls-target elites
 #   -> ga_ls25_elites, "GA 25% LS [LS on elites]"
 ```
 
@@ -177,7 +177,7 @@ algorithm.
 You can mix `custom` in with catalogue variants in one invocation:
 
 ```bash
-python -m run_static_ga --variants no-ls ls10-elites custom --ls-rate 0.25
+python -m run.run_static_ga --variants no-ls ls10-elites custom --ls-rate 0.25
 ```
 
 ---
@@ -186,29 +186,29 @@ python -m run_static_ga --variants no-ls ls10-elites custom --ls-rate 0.25
 
 ```bash
 # one variant
-python -m run_static_ga --variants ls100-elites
+python -m run.run_static_ga --variants ls100-elites
 
 # several, by short name
-python -m run_static_ga --variants no-ls ls10-elites ls100-elites
+python -m run.run_static_ga --variants no-ls ls10-elites ls100-elites
 
 # by full key — same thing
-python -m run_static_ga --variants ga_ls00 ga_ls10_elites ga_ls100_elites
+python -m run.run_static_ga --variants ga_ls00 ga_ls10_elites ga_ls100_elites
 
 # a whole group
-python -m run_static_ga --variants elites
+python -m run.run_static_ga --variants elites
 
 # groups and names together; duplicates are collapsed
-python -m run_static_ga --variants elites no-ls
+python -m run.run_static_ga --variants elites no-ls
 
 # the LS-rate sweep on both targets, without the deterministic ones
-python -m run_static_ga --variants fixed
+python -m run.run_static_ga --variants fixed
 ```
 
 You can also cut the grid down along the other two axes while iterating:
 
 ```bash
-python -m run_static_ga --instances 0 1 2 --runs 3      # 3 instances, 3 seeds
-python -m run_static_ga --split train                   # the 15 training instances
+python -m run.run_static_ga --instances 0 1 2 --runs 3      # 3 instances, 3 seeds
+python -m run.run_static_ga --split train                   # the 15 training instances
 ```
 
 `--instances` takes **indices**, not names: `0` is `test_1`, `9` is `test_10`.
@@ -241,7 +241,7 @@ All rates are validated at parse time: they must be in `[0, 1]`
 get an error message rather than a run that quietly did something odd.
 
 ```bash
-python -m run_static_ga \
+python -m run.run_static_ga \
   --variants elites \
   --tournament-k 5 --elitism-rate 0.05 \
   --crossover-rate 0.9 --mutation-rate 0.15 \
@@ -272,13 +272,13 @@ variants the analysis will compare against each other.
 
 ```bash
 # first setting
-python -m run_static_ga --variants elites --tag k3 --tournament-k 3 --only main
+python -m run.run_static_ga --variants elites --tag k3 --tournament-k 3 --only main
 
 # second setting, stacked onto the first
-python -m run_static_ga --variants elites --tag k7 --tournament-k 7 --only main --append
+python -m run.run_static_ga --variants elites --tag k7 --tournament-k 7 --only main --append
 
 # analyse and plot everything in the file together
-python -m run_static_ga --only analyze figures
+python -m run.run_static_ga --only analyze figures
 ```
 
 `runs.csv` now holds eight variants — `ga_ls10_k3_elites`, `ga_ls10_k7_elites`,
@@ -311,10 +311,10 @@ the per-target convergence plots.
 ## What gets written
 
 Everything goes under `--results-dir`, which defaults to
-**`results/static_ga/`**:
+**`results/results_rl_ga/static_ga/`**:
 
 ```
-results/static_ga/
+results/results_rl_ga/static_ga/
 ├── instances.json              the instance catalogue with features
 ├── runs.csv                    one row per (variant, instance, seed)
 ├── runs_metadata.json          operators, variants, environment, invocations
@@ -340,7 +340,7 @@ results/static_ga/
     └── per_instance/convergence_<instance>.png
 ```
 
-> **The default is `results/static_ga/`, not `results/`, on purpose.**
+> **The default is `results/results_rl_ga/static_ga/`, not `results/`, on purpose.**
 > `results/` holds the archived RL-GA study, and `run_all.py` overwrites it in
 > place. A static-only `runs.csv` written there would silently invalidate the
 > committed analysis and figures. Pass `--results-dir results` only if you
@@ -349,8 +349,8 @@ results/static_ga/
 Use separate directories for experiments you want to keep apart:
 
 ```bash
-python -m run_static_ga --variants elites --results-dir results/static_elites
-python -m run_static_ga --variants offspring --results-dir results/static_offspring
+python -m run.run_static_ga --variants elites --results-dir results/static_elites
+python -m run.run_static_ga --variants offspring --results-dir results/static_offspring
 ```
 
 `--no-trace` skips writing `raw/`. It saves disk, but the convergence figures
@@ -376,7 +376,7 @@ Both are printed at the start of the `analyze` and `figures` stages so there is
 no guessing. Override either with a full variant key:
 
 ```bash
-python -m run_static_ga --only analyze figures \
+python -m run.run_static_ga --only analyze figures \
   --reference ga_ls50_elites --baseline ga_ls00
 ```
 
@@ -423,7 +423,7 @@ population size. `--workers` defaults to `cpu_count - 2`.
   change them. Worker processes rebuild the instances themselves and inherit
   `os.environ`, not the parent's arguments:
   ```bash
-  FYP_TEST_INSTANCES=4 python -m run_static_ga --only main
+  FYP_TEST_INSTANCES=4 python -m run.run_static_ga --only main
   ```
 - **`--tournament-k` must be ≤ `--population-size`.** Selection draws that many
   *distinct* individuals. The script checks this before starting.
@@ -465,7 +465,7 @@ Every one of these stops before doing any work:
 
 ## Full flag reference
 
-`python -m run_static_ga --help` prints this list. Grouped as the parser groups
+`python -m run.run_static_ga --help` prints this list. Grouped as the parser groups
 them:
 
 **Stages**
@@ -506,7 +506,7 @@ them:
 
 | flag | default | meaning |
 |---|---|---|
-| `--results-dir DIR` | `results/static_ga` | where everything is written |
+| `--results-dir DIR` | `results/results_rl_ga/static_ga` | where everything is written |
 | `--tag NAME` | none | suffix variant keys/labels so runs stack |
 | `--append` | off | merge into an existing `runs.csv` |
 | `--no-trace` | off | skip `raw/` traces |

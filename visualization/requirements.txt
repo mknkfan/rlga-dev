@@ -1,0 +1,9 @@
+# Everything this project needs.  SciPy and pandas are deliberately absent:
+# the statistics (exact Wilcoxon signed-rank, bootstrap CIs, Cliff's delta,
+# Holm correction) are implemented in analysis/stats_utils.py and verified
+# against brute force by tests/test_stats_utils.py.
+#
+# The archived study was produced with Python 3.14.6 / numpy 2.5.1 on Windows;
+# the version floors below are the oldest the code is written against.
+numpy>=1.21
+matplotlib>=3.4      # figures only - every other stage runs without it
