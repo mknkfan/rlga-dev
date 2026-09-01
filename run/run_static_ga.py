@@ -82,7 +82,7 @@ from optimization.run_experiments import (
     run_seed_for,
     write_rows,
 )
-from paths import DEFAULT_RESULTS_DIR
+from run.paths import DEFAULT_RESULTS_DIR
 
 #: Stages this entry point knows about, in execution order.
 STAGES: Tuple[str, ...] = ("instances", "main", "timing", "analyze", "figures")

@@ -89,7 +89,7 @@ from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-from paths import DEFAULT_PSO_ABLATION_RESULTS_DIR
+from run.paths import DEFAULT_PSO_ABLATION_RESULTS_DIR
 from analysis.stats_utils import cliffs_delta, holm_bonferroni, paired_effect_sizes
 from core.problems import build_instances
 from optimization.ga_core import make_initial_population

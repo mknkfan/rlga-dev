@@ -42,7 +42,7 @@ from optimization.ga_core import (  # noqa: E402
     make_initial_population,
 )
 from optimization.rl_control import QLearningAgent, StateBins  # noqa: E402
-from paths import DEFAULT_BINS_PATH, DEFAULT_RESULTS_DIR  # noqa: E402
+from run.paths import DEFAULT_BINS_PATH, DEFAULT_RESULTS_DIR  # noqa: E402
 
 OUT_DIR = os.path.join(DEFAULT_RESULTS_DIR, "control_matched")
 TRACE_DIR = os.path.join(OUT_DIR, "control_traces")

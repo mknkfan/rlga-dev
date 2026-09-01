@@ -35,7 +35,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))
 
 from optimization.rl_control import StateBins  # noqa: E402
-from paths import DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR  # noqa: E402
+from run.paths import DEFAULT_RESULTS_DIR, EXTRA_FIGURES_DIR  # noqa: E402
 
 RAW = os.path.join(DEFAULT_RESULTS_DIR, "raw")
 VARIANTS = ("rlga_elites", "rlga_offspring")

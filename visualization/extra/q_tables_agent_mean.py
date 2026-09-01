@@ -26,7 +26,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))
 
 from optimization.rl_control import StateBins  # noqa: E402
-from paths import DEFAULT_AGENT_DIR  # noqa: E402
+from run.paths import DEFAULT_AGENT_DIR  # noqa: E402
 
 VARIANTS = ("rlga_elites", "rlga_offspring")
 SEEDS = (0, 1, 2)

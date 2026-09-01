@@ -27,7 +27,7 @@ from matplotlib.patches import Rectangle
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(os.path.dirname(HERE)))
 
-from paths import DEFAULT_AGENT_DIR, EXTRA_FIGURES_DIR  # noqa: E402
+from run.paths import DEFAULT_AGENT_DIR, EXTRA_FIGURES_DIR  # noqa: E402
 
 AGENT_DIR = DEFAULT_AGENT_DIR
 VARIANTS = ("rlga_elites", "rlga_offspring")

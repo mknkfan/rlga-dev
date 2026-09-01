@@ -26,7 +26,7 @@ import numpy as np
 from core.problems import build_instances
 from optimization.ga_core import ConfigurableGA, GAConfig, make_initial_population
 from optimization.rl_control import StateBins
-from paths import DEFAULT_BINS_PATH
+from run.paths import DEFAULT_BINS_PATH
 
 DEFAULT_OUTPUT = DEFAULT_BINS_PATH
 

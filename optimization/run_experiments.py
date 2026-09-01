@@ -31,7 +31,7 @@ from core.problems import build_instances, split_size
 from optimization.ga_core import ConfigurableGA, make_initial_population
 from optimization.rl_control import QLearningAgent, StateBins
 from optimization.variants import DEFAULT_CONTROL_INTERVAL, main_variants, resolve
-from paths import DEFAULT_RESULTS_DIR
+from run.paths import DEFAULT_RESULTS_DIR
 from train.calibrate_state_bins import DEFAULT_OUTPUT as DEFAULT_BINS_PATH
 from train.train_agents import AGENT_DIR, DEFAULT_AGENT_SEEDS, agent_path
 
