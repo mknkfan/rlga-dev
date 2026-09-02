@@ -1,0 +1,208 @@
+{
+  "split": "test",
+  "instance_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "runs_per_instance": 10,
+  "n_runs": 100,
+  "seed_rule": "run_seed = 42 + 100 * instance_index + run",
+  "objective": "cycle time (s), minimised; infeasible = +inf -> null",
+  "ga_config": {
+    "label": "GA (no LS)",
+    "population_size": 200,
+    "generations": 300,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.1,
+    "elitism_rate": 0.1,
+    "tournament_k": 3,
+    "mutation_sigma": 0.1,
+    "max_evaluations": 60000,
+    "record_diversity": true,
+    "verbose": 0
+  },
+  "sigma_min_threshold": 0.14,
+  "dwell": 0.3,
+  "check_path": true,
+  "retract": 0.06,
+  "check_arm": true,
+  "arm_clearance": 0.005,
+  "robot": {
+    "model": "4-DOF arm on Puma 560 link geometry (waist, shoulder, elbow, wrist pitch; roll joints locked)",
+    "d1": 0.6718,
+    "a2": 0.4318,
+    "a3": 0.0203,
+    "d3": 0.15005,
+    "d4": 0.4318,
+    "tool": 0.1,
+    "L3": 0.4322769135635166,
+    "max_reach": 0.8640769135635167,
+    "min_reach": 0.3493265567062471,
+    "joint_travel_deg": [
+      [
+        -160.0,
+        -45.0,
+        -137.69163633706378,
+        -97.30836366293622
+      ],
+      [
+        160.0,
+        225.0,
+        132.30836366293622,
+        102.69163633706378
+      ]
+    ],
+    "puma_joints": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "puma_travel_deg": [
+      [
+        -160.0,
+        160.0
+      ],
+      [
+        -45.0,
+        225.0
+      ],
+      [
+        -225.0,
+        45.0
+      ],
+      [
+        -110.0,
+        170.0
+      ],
+      [
+        -100.0,
+        100.0
+      ],
+      [
+        -266.0,
+        266.0
+      ]
+    ],
+    "joint_velocity_limits": [
+      1.7453292519943295,
+      1.6580627893946132,
+      1.7453292519943295,
+      2.2689280275926285
+    ],
+    "joint_acceleration_limits": [
+      6.0,
+      6.0,
+      6.0,
+      10.0
+    ]
+  },
+  "instances": {
+    "test_1": {
+      "n_machines": 6.0,
+      "footprint_area": 0.11983194335447064,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.061138746609423804,
+      "min_height": 0.15731088402423665,
+      "max_height": 0.30099914978386966,
+      "mean_height": 0.2378542184369541
+    },
+    "test_2": {
+      "n_machines": 6.0,
+      "footprint_area": 0.09630507567432159,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.04913524269098041,
+      "min_height": 0.14566132135308993,
+      "max_height": 0.3952350938796868,
+      "mean_height": 0.2464423742005374
+    },
+    "test_3": {
+      "n_machines": 6.0,
+      "footprint_area": 0.10251617592327036,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.05230417138942366,
+      "min_height": 0.18492296813930656,
+      "max_height": 0.35210494737550024,
+      "mean_height": 0.2795478260455662
+    },
+    "test_4": {
+      "n_machines": 6.0,
+      "footprint_area": 0.11758775284826989,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.05999375145319893,
+      "min_height": 0.1422100928185298,
+      "max_height": 0.39117313375362184,
+      "mean_height": 0.2623300281529867
+    },
+    "test_5": {
+      "n_machines": 6.0,
+      "footprint_area": 0.11479063297938133,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.058566649479276194,
+      "min_height": 0.14154320958957742,
+      "max_height": 0.35112783037479556,
+      "mean_height": 0.2273028723070829
+    },
+    "test_6": {
+      "n_machines": 6.0,
+      "footprint_area": 0.1314701431369656,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.06707660364130898,
+      "min_height": 0.15001426326724424,
+      "max_height": 0.3930166010359122,
+      "mean_height": 0.2382598816309872
+    },
+    "test_7": {
+      "n_machines": 6.0,
+      "footprint_area": 0.10688385026132421,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.054532576663940936,
+      "min_height": 0.18934938982275268,
+      "max_height": 0.3661909924966361,
+      "mean_height": 0.28809190370928056
+    },
+    "test_8": {
+      "n_machines": 6.0,
+      "footprint_area": 0.11593617665729547,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.059151110539436474,
+      "min_height": 0.16854833258922236,
+      "max_height": 0.3917778123249299,
+      "mean_height": 0.2791109581779115
+    },
+    "test_9": {
+      "n_machines": 6.0,
+      "footprint_area": 0.1241416210072671,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.06333756173840159,
+      "min_height": 0.1599063806800488,
+      "max_height": 0.35328270650047544,
+      "mean_height": 0.21524698033994916
+    },
+    "test_10": {
+      "n_machines": 6.0,
+      "footprint_area": 0.11714862650748305,
+      "floor_area": 1.9599999999999997,
+      "occupancy": 0.059769707401777075,
+      "min_height": 0.10844761312371179,
+      "max_height": 0.28269324490873804,
+      "mean_height": 0.17553949422105394
+    }
+  },
+  "environment": {
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.2",
+    "cpu_count": 24,
+    "workers": 12,
+    "timestamp": "2026-09-02 14:11:14"
+  }
+}
