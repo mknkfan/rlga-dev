@@ -1,0 +1,62 @@
+{
+  "baseline_generations": 300,
+  "repair_generations": 174,
+  "baseline_cpu_mean": 295.33833066666665,
+  "repair_cpu_mean": 251.93823133333333,
+  "cpu_ratio": 0.8530495542675874,
+  "equal_compute": [
+    {
+      "metric": "cycle_time",
+      "n_pairs": 150,
+      "mean_gain": 0.3319340649639578,
+      "median_gain": 0.28700604574231914,
+      "ci_low": 0.2855395643994937,
+      "ci_high": 0.3797526610313472,
+      "repair_wins": 136,
+      "baseline_wins": 14,
+      "permutation_p": 4.9999750001249995e-06,
+      "wilcoxon_p": 1.3172135764350199e-23
+    },
+    {
+      "metric": "mean_feasible",
+      "n_pairs": 150,
+      "mean_gain": 0.14962346666666668,
+      "median_gain": 0.1510995,
+      "ci_low": 0.14129061533333334,
+      "ci_high": 0.1582497601666667,
+      "repair_wins": 150,
+      "baseline_wins": 0,
+      "permutation_p": 4.9999750001249995e-06,
+      "wilcoxon_p": 2.2996057560670142e-26
+    },
+    {
+      "metric": "cpu_time",
+      "n_pairs": 150,
+      "mean_gain": 43.40009933333334,
+      "median_gain": 35.265600000000006,
+      "ci_low": 28.376525383333334,
+      "ci_high": 58.56294281666664,
+      "repair_wins": 99,
+      "baseline_wins": 51,
+      "permutation_p": 4.9999750001249995e-06,
+      "wilcoxon_p": 8.88679328633254e-07
+    }
+  ],
+  "equal_evaluations_reference": {
+    "metric": "cycle_time",
+    "n_pairs": 150,
+    "mean_gain": 0.34884328760320216,
+    "median_gain": 0.3034739037316676,
+    "ci_low": 0.30221374276022656,
+    "ci_high": 0.3968827703182335,
+    "repair_wins": 140,
+    "baseline_wins": 10,
+    "permutation_p": 4.9999750001249995e-06,
+    "wilcoxon_p": 2.5929039555713347e-24
+  },
+  "feasible": {
+    "both": 150,
+    "baseline_only": 0,
+    "repair_only": 0
+  }
+}

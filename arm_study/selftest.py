@@ -25,7 +25,15 @@ from armmesh import (  # noqa: E402
 )
 from evaluator import CycleTimeEvaluator  # noqa: E402
 from ga import ConfigurableGA, GAConfig, make_initial_population  # noqa: E402
-from geometry import Machine, rectangles_overlap  # noqa: E402
+from geometry import (  # noqa: E402
+    Machine,
+    clears_circle,
+    keep_out_shortfall,
+    layout_is_placeable,
+    overlap_depth,
+    rectangles_overlap,
+    repair_placement,
+)
 from problems import build_instances, random_layout  # noqa: E402
 from robot import (  # noqa: E402
     BRANCHES,
@@ -435,6 +443,107 @@ def main() -> None:
           f"{result.gen_best[0]:.4f} -> {result.best_fitness:.4f} s")
     check("the evaluation budget is respected",
           result.total_evaluations <= 60 * 40, f"{result.total_evaluations}")
+
+    print("\n9b. Placement repair is a projection onto the placeable set:")
+    # The three properties the repair is only sound if it has: it lands
+    # inside, it moves nothing that was already inside, and it never touches
+    # the gene that decides where the loading port ends up.
+    repaired_ok = untouched = rotations_held = 0
+    unplaceable = already = 0
+    probe_ga = ConfigurableGA(instance, config=GAConfig(repair=True), seed=5)
+    seed_pop, _ = make_initial_population(instance, 80, seed=5)
+    for row in seed_pop:
+        for _ in range(6):
+            genes = probe_ga.apply_bounds(row + rng.normal(0.0, 0.05, row.size))
+            before = [m.copy_at(g[0], g[1], g[2])
+                      for m, g in zip(instance.machines, genes.reshape(-1, 3))]
+            placeable_before = layout_is_placeable(
+                before, instance.bounds, instance.base_xy,
+                instance.keep_out_radius, instance.clearance)
+            after = repair_placement(
+                before, instance.bounds, instance.base_xy,
+                instance.keep_out_radius, instance.clearance)
+            rotations_held += all(p.rotation == q.rotation for p, q in zip(before, after))
+            if placeable_before:
+                already += 1
+                untouched += all(p.x == q.x and p.y == q.y for p, q in zip(before, after))
+            else:
+                unplaceable += 1
+                repaired_ok += layout_is_placeable(
+                    after, instance.bounds, instance.base_xy,
+                    instance.keep_out_radius, instance.clearance)
+    total = already + unplaceable
+    check("an unplaceable layout comes back placeable",
+          repaired_ok == unplaceable, f"{repaired_ok}/{unplaceable}")
+    check("a placeable layout comes back untouched",
+          untouched == already, f"{untouched}/{already}")
+    check("repair never moves a rotation gene", rotations_held == total,
+          f"{rotations_held}/{total}")
+    check("repair is off by default", GAConfig().repair is False)
+
+    # The perturbations above are the case the repair exists for -- a child
+    # that missed by a little.  A uniform draw is the opposite extreme, and it
+    # is worth knowing the projection does not simply give up there, because
+    # crossover of two distant parents produces layouts that bad.
+    hard_ok = hard_total = 0
+    for _ in range(300):
+        genes = random_layout(instance, rng).reshape(-1, 3)
+        before = [m.copy_at(g[0], g[1], g[2])
+                  for m, g in zip(instance.machines, genes)]
+        if layout_is_placeable(before, instance.bounds, instance.base_xy,
+                               instance.keep_out_radius, instance.clearance):
+            continue
+        after = repair_placement(before, instance.bounds, instance.base_xy,
+                                 instance.keep_out_radius, instance.clearance)
+        hard_total += 1
+        hard_ok += layout_is_placeable(after, instance.bounds, instance.base_xy,
+                                       instance.keep_out_radius, instance.clearance)
+    # Not all of them: the loop is bounded, and a crowded draw can need more
+    # passes than it gets.  The feasibility test still decides, so a miss costs
+    # an evaluation, not a wrong answer.
+    check("a uniformly random layout is repaired almost always",
+          hard_ok >= 0.97 * hard_total, f"{hard_ok}/{hard_total}")
+
+    # Repair is an operator, not a side effect: neither the machines handed in
+    # nor the chromosome handed in comes back written to.
+    genes = random_layout(instance, rng)
+    handed_in = [m.copy_at(g[0], g[1], g[2])
+                 for m, g in zip(instance.machines, genes.reshape(-1, 3))]
+    frozen = [(m.x, m.y, m.rotation) for m in handed_in]
+    repair_placement(handed_in, instance.bounds, instance.base_xy,
+                     instance.keep_out_radius, instance.clearance)
+    check("repair does not write to the machines it is given",
+          [(m.x, m.y, m.rotation) for m in handed_in] == frozen)
+
+    before_genes = genes.copy()
+    probe_ga.repair(genes)
+    check("repair does not write to the chromosome it is given",
+          np.array_equal(genes, before_genes))
+
+    # overlap_depth and keep_out_shortfall are the readable statements of the
+    # two pushes repair_placement inlines in vectorised form.  Pinning them to
+    # the predicates they invert is what stops the two copies drifting apart.
+    depth_bad = shortfall_bad = mtv_bad = 0
+    for _ in range(600):
+        a, b = (instance.machines[0].copy_at(
+                    rng.uniform(-0.3, 0.3), rng.uniform(-0.3, 0.3),
+                    rng.uniform(0.0, 360.0)) for _ in range(2))
+        overlapping = rectangles_overlap(a, b, instance.clearance)
+        depth, axis = overlap_depth(a, b, instance.clearance)
+        depth_bad += overlapping != (depth > 0.0)
+        if overlapping:
+            nudged = b.copy_at(b.x + axis[0] * depth * (1 + 1e-9),
+                               b.y + axis[1] * depth * (1 + 1e-9), b.rotation)
+            mtv_bad += rectangles_overlap(a, nudged, instance.clearance)
+        shortfall = keep_out_shortfall(a, instance.base_xy, instance.keep_out_radius)
+        shortfall_bad += clears_circle(
+            a, instance.base_xy, instance.keep_out_radius) != (shortfall <= 0.0)
+    check("overlap_depth fires exactly when rectangles_overlap does",
+          depth_bad == 0, f"{depth_bad} disagreements")
+    check("its minimum translation really separates the pair",
+          mtv_bad == 0, f"{mtv_bad} failures")
+    check("keep_out_shortfall fires exactly when clears_circle does",
+          shortfall_bad == 0, f"{shortfall_bad} disagreements")
 
     print("\n10. A run is reproducible from its seed:")
     def once() -> float:

@@ -46,7 +46,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from evaluator import CycleTimeEvaluator
-from geometry import Machine, layout_is_placeable
+from geometry import Machine, layout_is_placeable, repair_placement
 from problems import Instance
 
 
@@ -63,6 +63,12 @@ class GAConfig:
     tournament_k: int = 3
     #: Gaussian jitter width for a position gene, as a fraction of its range.
     mutation_sigma: float = 0.10
+    #: Project unplaceable children back onto the placeable set after mutation.
+    #: Off by default: the archived runs were produced without it, and turning
+    #: it on changes what the operators are being measured on.
+    repair: bool = False
+    #: Slack projected past each placement constraint when repairing.
+    repair_margin: float = 0.005
     max_evaluations: Optional[int] = None
     record_diversity: bool = True
     verbose: int = 0
@@ -199,6 +205,40 @@ class ConfigurableGA:
         repaired[self.is_rotation] = repaired[self.is_rotation] % 360.0
         return repaired
 
+    def repair(self, chromosome: np.ndarray) -> np.ndarray:
+        """Push an unplaceable layout back onto the placeable set.
+
+        The clipping :meth:`apply_bounds` already does is a repair, but only
+        of the one constraint that is separable per gene: a position clipped
+        into the cell says nothing about the robot's column or the neighbour
+        it may be standing in.  This closes the other two, so that mutation
+        stops spending evaluations on layouts whose only fault is geometric.
+
+        Positions only -- the rotation genes come back exactly as drawn.  A
+        chromosome that is already placeable is returned unchanged.
+
+        The input is never written to.  ``np.asarray`` would hand back the
+        caller's own buffer for a float array, and the row assignment below
+        would then edit a parent in place; the copy is what keeps this an
+        operator rather than a side effect.
+        """
+        if not self.config.repair:
+            return chromosome
+        instance = self.instance
+        rows = np.array(chromosome, dtype=float).reshape(-1, 3)
+        placed = repair_placement(
+            [machine.copy_at(row[0], row[1], row[2])
+             for machine, row in zip(instance.machines, rows)],
+            instance.bounds,
+            instance.base_xy,
+            instance.keep_out_radius,
+            instance.clearance,
+            margin=self.config.repair_margin,
+        )
+        rows[:, 0] = [machine.x for machine in placed]
+        rows[:, 1] = [machine.y for machine in placed]
+        return rows.reshape(-1)
+
     def tournament(self, population: np.ndarray, fitness: np.ndarray) -> np.ndarray:
         """Pick the best of ``tournament_k`` random members.
 
@@ -237,7 +277,7 @@ class ConfigurableGA:
             mutated[i] += self.np_rng.normal(0.0, sigma * span[i])
             mutated[i + 1] += self.np_rng.normal(0.0, sigma * span[i + 1])
             mutated[i + 2] = self.np_rng.random() * 360.0
-        return self.apply_bounds(mutated)
+        return self.repair(self.apply_bounds(mutated))
 
     # -- the loop ------------------------------------------------------
 

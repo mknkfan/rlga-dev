@@ -216,6 +216,52 @@ nothing about reachability or manipulability, which the GA still has to find
 for itself. `seeded_fraction` is recorded in every run so this can never
 quietly mask a broken instance.
 
+### Placement repair (`GAConfig.repair`, off by default)
+
+A mutated child that misses the geometry by a millimetre scores `+∞` and is
+indistinguishable, to selection, from one with every machine stacked on the
+robot. `repair_placement` closes that gap: it projects an unplaceable layout
+back onto the placeable set — clip each centre into the cell, push any machine
+fouling the robot's column radially clear, then separate overlapping pairs
+along the minimum-translation axis, looped because the three moves interact.
+
+Two properties make it a projection rather than local search. It is **identity
+on the placeable set**, so a legal layout is returned untouched; and it is
+**objective-blind**, evaluating no cycle time, so it repairs the representation
+without optimising through it. It moves positions only — rotations come back
+exactly as drawn, which matters because rotation is what decides where the
+loading port ends up.
+
+It is **off by default**: the archived runs in `results_retract/` were produced
+without it, and the baseline is bit-identical with the flag off.
+
+### Does the repair help? (`results_repair/`, 150 paired runs)
+
+Yes, and it survives the control that matters. Each pair is one
+(instance, seed) with both arms handed the identical seeded population, so
+they differ only in the operator.
+
+| budget | baseline | repair | gain | pairs won | p |
+|---|---:|---:|---:|---:|---:|
+| equal evaluations (300 gens each) | 10.970 s | 10.621 s | **0.349 s** | 140/150 | 5e-6 |
+| equal compute (repair cut to 174 gens) | 10.970 s | — | **0.332 s** | 136/150 | 5e-6 |
+
+The second row is the one to trust. At equal *evaluations* the comparison is
+rigged in the repair's favour: an infeasible layout is thrown out by the
+placement test for ~0.36 ms while a feasible one costs ~6.1 ms of IK,
+manipulability and swept-path collision — 17× more — so repair quietly draws
+1.7× the compute for the same nominal budget. Truncating it to 174 generations
+puts it at **85 % of the baseline's CPU and 58 % of its evaluations** (31 520
+vs 54 200), and it still wins by 0.33 s. `python -m arm_study.equal_cpu_check`
+reproduces that.
+
+The mechanism is the population's feasible share, which rises from 0.59 to
+0.75 and wins **150 of 150** pairs. The cost that was expected — repair
+collapsing machines onto the constraint boundary and killing diversity —
+does not appear: measured on mutated children, repair fires on only 4–10 % of
+them and moves a machine a median 8–27 mm inside a 1150 mm cell, leaving
+population-wide positional spread unchanged to 0.1 %.
+
 ## Results (10 test instances × 10 seeds = 100 runs)
 
 `results_retract/` — the current tree, produced by
@@ -304,7 +350,9 @@ than hidden behind an off-by-default switch.
 | `viewer.py` | the standalone drag-to-rotate HTML viewer |
 | `run_ga.py` | CLI: run → aggregate → figures |
 | `run_ablation.py` | CLI: the crossover × mutation ablation, run → aggregate |
-| `selftest.py` | 22 checks against finite differences and closed forms |
+| `run_repair_ab.py` | CLI: the paired A/B of the placement repair, run → aggregate → figures |
+| `equal_cpu_check.py` | the equal-compute control for that A/B |
+| `selftest.py` | 64 checks against finite differences and closed forms |
 
 Outputs land in `results/`: `runs.csv`, `summary.md`, `metadata.json`,
 `raw/<instance>_run<k>.json`, and per instance
