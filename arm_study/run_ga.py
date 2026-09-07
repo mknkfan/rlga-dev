@@ -4,6 +4,7 @@ Run the static GA on the cycle-time objective and write the study.
     python -m arm_study.run_ga                      # 10 instances x 10 seeds
     python -m arm_study.run_ga --instances 0 --runs 3 --generations 60
     python -m arm_study.run_ga --only aggregate figures
+    python -m arm_study.run_ga --repair             # with the placement repair
     python -m arm_study.run_ga --animate            # also write cycle.gif
 
 Everything is written under ``--results-dir`` (default
@@ -508,6 +509,16 @@ def build_parser() -> argparse.ArgumentParser:
     ga.add_argument("--mutation-rate", type=float, default=0.1)
     ga.add_argument("--elitism-rate", type=float, default=0.1)
     ga.add_argument("--tournament-k", type=_positive_int("--tournament-k"), default=3)
+    ga.add_argument("--repair", action="store_true",
+                    help="project an unplaceable child back onto the placeable set "
+                         "after mutation, rather than spend its evaluation on a layout "
+                         "whose only fault is geometric. Off by default: the archived "
+                         "results/ runs were produced without it, so turning it on "
+                         "changes what the operators are being measured on. "
+                         "run_repair_ab.py is the paired A/B this option came from.")
+    ga.add_argument("--repair-margin", type=float, default=0.005,
+                    help="metres of slack projected past each placement constraint by "
+                         "--repair; ignored without it")
 
     model = parser.add_argument_group("robot and objective")
     model.add_argument("--sigma-min", type=float, default=0.14,
@@ -569,6 +580,8 @@ def main() -> None:
         mutation_rate=args.mutation_rate,
         elitism_rate=args.elitism_rate,
         tournament_k=args.tournament_k,
+        repair=args.repair,
+        repair_margin=args.repair_margin,
     )
     stages = list(args.only or STAGES)
     total = len(indices) * args.runs
@@ -580,7 +593,9 @@ def main() -> None:
           f"{args.runs} seeds = {total} runs")
     print(f"GA                : pop={config.population_size} gens={config.generations} "
           f"cx={config.crossover_rate:g} mut={config.mutation_rate:g} "
-          f"elitism={config.elitism_rate:g} k={config.tournament_k} (no local search)")
+          f"elitism={config.elitism_rate:g} k={config.tournament_k} (no local search)"
+          + (f", placement repair on (margin {config.repair_margin:g} m)"
+             if config.repair else ", no placement repair"))
     print(f"Objective         : cycle time, sigma_min >= {args.sigma_min:g} m/rad, "
           f"dwell {args.dwell:g} s"
           + ("" if args.no_path_check else ", clearance checked along every move")

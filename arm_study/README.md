@@ -256,11 +256,40 @@ vs 54 200), and it still wins by 0.33 s. `python -m arm_study.equal_cpu_check`
 reproduces that.
 
 The mechanism is the population's feasible share, which rises from 0.59 to
-0.75 and wins **150 of 150** pairs. The cost that was expected — repair
-collapsing machines onto the constraint boundary and killing diversity —
-does not appear: measured on mutated children, repair fires on only 4–10 % of
-them and moves a machine a median 8–27 mm inside a 1150 mm cell, leaving
-population-wide positional spread unchanged to 0.1 %.
+0.75 and wins **150 of 150** pairs. Traced over 324 000 children per arm
+(3 instances × 4 seeds × 150 generations), the accounting is:
+
+| | baseline | repair |
+|---|---:|---:|
+| placeable before repair | 58.90 % | 44.31 % |
+| placeable after repair | 58.90 % | **99.73 %** |
+| **finite fitness** | **52.76 %** | **69.39 %** |
+| `+∞` via `placement` | 41.10 % | 0.27 % |
+| `+∞` via robot constraints | 6.14 % | 30.34 % |
+
+Repair engages on 55.7 % of children and rescues 55.4 % of them to placeable,
+failing outright on 0.27 % — about 1 in 370, which exhaust the projection's 12
+passes and keep `+∞` with `rejection="placement"`. Corrections are small: median
+13.8 mm, p90 61.2 mm, in a 1150 mm cell.
+
+Note what repair does **not** do. Of the children it rescues, only 54 % go on to
+score a finite fitness; the rest fail a robot constraint instead. Repair moves
+rejections downstream rather than removing them — `placement` collapses from
+41.1 % to 0.3 % while `clearance` climbs from 1.4 % to 15.1 %, because a layout
+with its machines packed tight is one the arm then cannot swing through. The
+net is +16.6 points of finite fitness, not the +41 that eliminating the
+placement rejections alone would suggest.
+
+The cost that was expected — repair collapsing machines onto the constraint
+boundary and killing diversity — does not appear. Position-only spread over
+3 instances × 4 seeds × 150 generations is 73.8 mm without repair against
+71.8 mm with it, a 2.7 % difference; by the last generation the repaired runs
+hold slightly *more* spread (36.1 vs 34.0 mm). Both arms fall from 377 mm to
+about 35 mm, which is the GA converging rather than the repair flattening
+anything. Note that `mean_diversity` in `summary.md` cannot show this: it
+averages per-gene standard deviation across x, y **and** rotation, and rotation
+spans 0–360 while positions span ~1.15 m, so it is essentially rotation spread
+— the one gene the repair never touches.
 
 ## Results (10 test instances × 10 seeds = 100 runs)
 

@@ -15,6 +15,7 @@ combination, 6000 runs in total).
     python -m arm_study.run_ablation --dry-run          # plan and cost only
     python -m arm_study.run_ablation --workers 12 --resume
     python -m arm_study.run_ablation --only aggregate   # rebuild the tables
+    python -m arm_study.run_ablation --repair           # sweep with the repair on
 
 What the two rates mean in :class:`ga.ConfigurableGA`: the crossover rate is
 the probability that a selected *pair* undergoes uniform crossover, and the
@@ -654,6 +655,16 @@ def build_parser() -> argparse.ArgumentParser:
     operators.add_argument("--tournament-k", type=_positive_int("--tournament-k"), default=3)
     operators.add_argument("--mutation-sigma", type=float, default=0.10,
                            help="Gaussian jitter width, as a fraction of each gene's range")
+    operators.add_argument("--repair", action="store_true",
+                           help="project an unplaceable child back onto the placeable "
+                                "set after mutation. Held fixed across the grid, so the "
+                                "sweep still varies the two rates and nothing else. Off "
+                                "by default: the archived results_ablation/ runs were "
+                                "produced without it, and the rates are being measured "
+                                "on a different operator with it on.")
+    operators.add_argument("--repair-margin", type=float, default=0.005,
+                           help="metres of slack projected past each placement "
+                                "constraint by --repair; ignored without it")
 
     model = parser.add_argument_group("robot and objective")
     model.add_argument("--sigma-min", type=float, default=0.14,
@@ -715,6 +726,8 @@ def main() -> None:
         elitism_rate=args.elitism_rate,
         tournament_k=args.tournament_k,
         mutation_sigma=args.mutation_sigma,
+        repair=args.repair,
+        repair_margin=args.repair_margin,
     )
     configs = build_configs(base, args.crossover_rates, args.mutation_rates)
     stages = list(args.only or STAGES)
@@ -731,7 +744,9 @@ def main() -> None:
           f"'{args.split}' instances x {args.runs} seeds = {total_runs} runs")
     print(f"Fixed operators   : pop={base.population_size} gens={base.generations} "
           f"({base.evaluation_budget()} evals/run) elitism={base.elitism_rate:g} "
-          f"k={base.tournament_k} (no local search)")
+          f"k={base.tournament_k} (no local search)"
+          + (f", placement repair on (margin {base.repair_margin:g} m)"
+             if base.repair else ", no placement repair"))
     print(f"Objective         : cycle time, sigma_min >= {args.sigma_min:g} m/rad, "
           f"dwell {args.dwell:g} s"
           + ("" if args.no_path_check else ", clearance checked along every move")
